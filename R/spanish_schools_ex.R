@@ -2,22 +2,25 @@
 ##' which tries to aggregate data on all schools in Spain. To build reliable
 ##' and self-standing scraping examples, this package downloaded data on 27
 ##' randomly sampled schools from this website. This function returns the full
-##' HTML links to the local website that can be used as exercises for scraping
-##' some data.
+##' HTML links to the local HTML files that can be used as exercises for
+##' scraping some data.
 ##'
 ##' All images should work well out of the box except the Google maps on the
-##' right, which is expected. Please note that these websites are not meant
+##' right. Please note that these websites are not meant
 ##' to be used to reliably explore their hyperlink or other features, as
 ##' these will change inevitably when the website changes some of it's
-##' structures.
+##' structures. This is because some of the links still point to the
+##' real website. 
 ##' 
 ##' @title Return the paths to the complete HTML website of a sample of Spanish Schools
 ##' @return A character vector with 27 local HTML links
 ##' @author Jorge Cimentada
+##' @export
 ##'
 ##' @examples
 ##'
 ##' library(xml2)
+##' library(scrapex)
 ##'
 ##' one_link <- spanish_schools_ex()[5]
 ##'
@@ -34,8 +37,8 @@ spanish_schools_ex <- function() {
   zip_data <- file.path(pkg_dir, "extdata")
 
   # Unzip it after installation
-  unzip(file.path(zip_data, "spanish_schools_ex.zip"),
-        exdir = zip_data)
+  utils::unzip(file.path(zip_data, "spanish_schools_ex.zip"),
+               exdir = zip_data)
   
   html_files <-
     list.files(file.path(zip_data, "spanish_schools_ex"),
@@ -50,9 +53,11 @@ spanish_schools_ex <- function() {
 ##' @param x a character vector of HTML files
 ##' @return the same character vector but with "file://" appended to it
 ##' @author Jorge Cimentada
+##' @export
 ##' @examples
 ##'
 ##' library(xml2)
+##' library(scrapex)
 ##'
 ##' one_link <- spanish_schools_ex()[5]
 ##' prep_browser(one_link)

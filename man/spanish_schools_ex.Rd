@@ -14,19 +14,21 @@ This example hosts data from the website https://www.buscocolegio.com/
 which tries to aggregate data on all schools in Spain. To build reliable
 and self-standing scraping examples, this package downloaded data on 27
 randomly sampled schools from this website. This function returns the full
-HTML links to the local website that can be used as exercises for scraping
-some data.
+HTML links to the local HTML files that can be used as exercises for
+scraping some data.
 }
 \details{
 All images should work well out of the box except the Google maps on the
-right, which is expected. Please note that these websites are not meant
+right. Please note that these websites are not meant
 to be used to reliably explore their hyperlink or other features, as
 these will change inevitably when the website changes some of it's
-structures.
+structures. This is because some of the links still point to the
+real website.
 }
 \examples{
 
 library(xml2)
+library(scrapex)
 
 one_link <- spanish_schools_ex()[5]
 

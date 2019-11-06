@@ -18,6 +18,7 @@ Prepare local HTML links to open with your browser
 \examples{
 
 library(xml2)
+library(scrapex)
 
 one_link <- spanish_schools_ex()[5]
 prep_browser(one_link)

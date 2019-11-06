@@ -1,18 +1,21 @@
 Package: scrapex
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Data package containing websites saved locally for web scraping examples
+Version: 0.0.1.9999
 Authors@R: 
     person(given = "Jorge",
            family = "Cimentada",
            role = c("aut", "cre"),
            email = "cimentadaj@gmail.com",
            comment = c(ORCID = "0000-0001-5594-1156"))
-Description: What the package does (one paragraph).
+Description: By saving locally a variety of websites, this package offers real world examples for scraping websites which will be self-standing and available in the future. Forget about making scraping tutorial which will be obsolete 6 months from now: scrapex is meant to save them for eternity!
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: es
 LazyData: true
 Imports: 
     here,
-    xml2
+    xml2,
+    utils
 RoxygenNote: 6.1.1
+Suggests: 
+    testthat (>= 2.1.0)
