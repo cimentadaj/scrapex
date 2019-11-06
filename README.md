@@ -1,0 +1,1 @@
+Since web scraping tutorials are deemed to be obsolete once a website changes it's structure or goes down, this R package saves specific web paths of certain websites to make scraping examples reproducibly in the long term.
