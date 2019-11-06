@@ -37,8 +37,8 @@ spanish_schools_ex <- function() {
   zip_data <- file.path(pkg_dir, "extdata")
 
   # Unzip it after installation
-  zip::unzip(zipfile = file.path(zip_data, "spanish_schools_ex.zip"),
-             exdir = zip_data)
+  unzip(zipfile = file.path(zip_data, "spanish_schools_ex.zip"),
+        exdir = zip_data)
                
   html_files <-
     list.files(file.path(zip_data, "spanish_schools_ex"),
