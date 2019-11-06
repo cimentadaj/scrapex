@@ -34,14 +34,10 @@
 ##'
 spanish_schools_ex <- function() {
   pkg_dir <- system.file(package = "scrapex")
-  zip_data <- file.path(pkg_dir, "extdata")
-
-  # Unzip it after installation
-  utils::unzip(zipfile = file.path(zip_data, "spanish_schools_ex.zip"),
-               exdir = zip_data)
+  dir_data <- file.path(pkg_dir, "extdata", "spanish_schools_ex")
                
   html_files <-
-    list.files(file.path(zip_data, "spanish_schools_ex"),
+    list.files(dir_data,
                pattern = "detalles-colegio\\.action.+\\.html$",
                recursive = TRUE,
                full.names = TRUE)
