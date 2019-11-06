@@ -3,14 +3,6 @@
 
 # scrapex
 
-<!-- badges: start -->
-
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/cimentadaj/scrapex?branch=master&svg=true)](https://ci.appveyor.com/project/cimentadaj/scrapex)
-[![Travis build
-status](https://travis-ci.org/cimentadaj/scrapex.svg?branch=master)](https://travis-ci.org/cimentadaj/scrapex)
-<!-- badges: end -->
-
 Since web scraping tutorials are deemed to be obsolete once a website
 changes it’s structure or goes down indefinately, `scrapex` saves
 specific web paths of certain websites to make scraping examples
