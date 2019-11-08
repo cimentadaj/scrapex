@@ -63,7 +63,7 @@ school_websites
 ```
 
 To browse the actual website of one of these links, use `prep_browser`
-with `openURL`:
+with `browseURL`:
 
 ``` r
 browseURL(prep_browser(school_websites)[1])
@@ -90,9 +90,9 @@ send a pull request following these guidelines:
     return the full local path of the html for each single page of your
     example (**not the full local path complete website**).
 
-  - All of your local example files should be in a zipped file located
+  - All of your local example files should be in a folder located
     in `inst/extdata` with the same name as the main function. Within
-    this zip file, there should be only one `.R` file which shows how
+    this folder, there should be only one `.R` file which shows how
     the download was done. I encourage anyone looking to do a PR to look
     at the one for `spanish_school_ex` which is called
     `download_school.R` (note that this is tricky because downloading a
