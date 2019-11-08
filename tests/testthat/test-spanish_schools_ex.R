@@ -1,7 +1,7 @@
 html_links <- spanish_schools_ex()
 
 test_that("spanish_schools_ex returns correct examples", {
-  expect_length(html_links, n = 1)
+  expect_length(html_links, n = 27)
   expect_true(class(html_links) == "character")
 })
 

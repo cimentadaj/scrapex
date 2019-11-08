@@ -54,14 +54,21 @@ for (i in seq_along(school_codes)) {
   setwd(dir_school[i])
   system(download_req)
 
+  # Search only for the HTML of the example that contains
+  # the most information (without needing the CSS files, etc..)
+  # This had to be done manually to identify which is the important
+  # file.
+  file_cp <- list.files("./www.buscocolegio.com/Colegio/",
+                        pattern = "\\.orig",
+                        recursive = TRUE,
+                        full.names = TRUE)
+
+  # Save the file with a simpler name to avoid CRAN check
+  # fails. Save this in the spanish_schools_ex folder to
+  # avoid having a deep structure of folders.
+  file.copy(file_cp,
+            paste0("../school_", school_codes[i], ".html"))
+
+  # Delete this webpage's folder to save space and sanity
+  unlink(dir_school[i], recursive = TRUE)
 }
-
-# Each school now has a folder with it's code within inst/extdata
-# The file of interest (the html with the website) can be
-# found with:
-
-## html_files <-
-##   list.files(raw_dir,
-##              pattern = "detalles-colegio\\.action.+\\.html$",
-##              recursive = TRUE,
-##              full.names = TRUE)

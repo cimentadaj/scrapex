@@ -28,6 +28,11 @@ prep_browser(one_link)
 browseURL(prep_browser(one_link))
 }
 
+# There have been failed attempts with Windows explorer and other browsers
+# from time to time. In case you want to try it out with other browsers,
+# just paste the example link of the html website from
+# prep_browser(one_link) to your browser and it should open locally.
+
 }
 \author{
 Jorge Cimentada

@@ -62,6 +62,11 @@ spanish_schools_ex <- function() {
 ##' # You can open it with your browser with browseURL
 ##' browseURL(prep_browser(one_link))
 ##' }
+##'
+##' # There have been failed attempts with Windows explorer and other browsers
+##' # from time to time. In case you want to try it out with other browsers,
+##' # just paste the example link of the html website from
+##' # prep_browser(one_link) to your browser and it should open locally.
 ##' 
 prep_browser <- function(x) {
   ready_html <- paste0("file://", x)
