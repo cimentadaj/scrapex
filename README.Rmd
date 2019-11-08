@@ -15,11 +15,11 @@ knitr::opts_chunk$set(
 
 # scrapex
 
-Since web scraping tutorials are deemed to be obsolete once a website changes it's structure or goes down indefinately, `scrapex` saves specific web paths of certain websites to make scraping examples reproducibly in the long term.
+Since web scraping tutorials are deemed to be obsolete once a website changes it's structure or goes down indefinately, `scrapex` saves specific web paths of certain websites to make scraping examples reproducibly in the long term. To make the package as lightweight as possible, some images/figures/maps have been excluded. Aside from that, most examples should contain the rough skeleton of the original website.
 
 ## Installation
 
-`scrapex` will probably never see the light of CRAN because it's too heavy, so you need to install the development version from [GitHub](https://github.com/) with:
+I'm not sure whether `scrapex` will ever see the light of CRAN since it is deemed to grow in size if new examples come along, so you need to install the development version from [GitHub](https://github.com/) with:
 
 ```{r, eval = FALSE}
 # install.packages("devtools")
@@ -53,10 +53,12 @@ read_html(school_websites[1])
 
 This package is a work in progress and welcomes more examples from different backgrounds. If you want to contribute to the package you can send a pull request following these guidelines:
 
-* One function that clearly states the substantive theme of your example (for example, `spanish_school_ex`). This function should return the full local path of the html for each single page of your example (**not the full local path complete website**).
+* One function that clearly states the substantive theme of your example (for example, `spanish_schools_ex`). This function should return the full local path of the html for each single page of your example (**not the full local path to the complete website**).
 
-* All of your local example files should be in a zipped file located in `inst/extdata` with the same name as the main function. Within this zip file, there should be only one `.R` file which shows how the download was done. I encourage anyone looking to do a PR to look at the one for `spanish_school_ex` which is called `download_school.R` (note that this is tricky because downloading a path of a website many times results in downloading the **complete** website. Look at the example in `download_school.R` to only download single paths).
+* All of your local example files should be in a folder located in `inst/extdata` with the same name as the main function. Within this folder, there should be only one `.R` file which shows how the download was done. We aim to keep the package as lightweight as possible so, for example, it would be important to delete large files and complicated (long) paths. Keep in mind two things: nested directories with very long names (standard when saving a website) and complicated file names (containing dots, question marks, equal signs, etc...) will throw errors when running `devtools::check()`. For the `spanish_schools_ex` I downloaded each path to the websites, identified the relevant html, renamed it to something shorter and valid, moved only that file to the `spanish_schools_ex` folder and deleted the website's complete directory structure. The result is only one html file for each path of the website.
 
-* Each main function should have an accompanied test file that has **at least** the same tests as `spanish_school_ex()`.
+I encourage anyone looking to do a PR to look at the one for `spanish_schools_ex` which is called `download_school.R` (note that this is tricky because downloading a path of a website many times results in downloading the **complete** website. Look at the example in `download_school.R` to only download single paths).
 
-Before sending a PR, I strongly suggest you look at the source code of `spanish_school_ex()` to see the expected structure. All suggestions are very welcome if you feel this is not the most optimal storage strategy! Open an issue request and we'll discuss it.
+* Each main function should have an accompanied test file that has **at least** the same tests as `spanish_schools_ex()`.
+
+Before sending a PR, I strongly suggest you look at the source code of `spanish_schools_ex()` to see the expected structure. All suggestions are very welcome if you feel this is not the most optimal storage strategy! Open an issue request and we'll discuss it.
