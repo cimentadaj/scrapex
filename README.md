@@ -63,7 +63,7 @@ school_websites
 ```
 
 To browse the actual website of one of these links, use `prep_browser`
-with `openURL`:
+with `browseURL`:
 
 ``` r
 browseURL(prep_browser(school_websites)[1])
