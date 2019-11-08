@@ -22,7 +22,7 @@
 ##' library(xml2)
 ##' library(scrapex)
 ##'
-##' one_link <- spanish_schools_ex()[5]
+##' one_link <- spanish_schools_ex()[1]
 ##'
 ##' read_html(one_link)
 ##'
@@ -38,7 +38,7 @@ spanish_schools_ex <- function() {
                
   html_files <-
     list.files(dir_data,
-               pattern = "detalles-colegio\\.action.+\\.html$",
+               pattern = "school_.+\\.html$",
                recursive = TRUE,
                full.names = TRUE)
 
@@ -55,7 +55,7 @@ spanish_schools_ex <- function() {
 ##' library(xml2)
 ##' library(scrapex)
 ##'
-##' one_link <- spanish_schools_ex()[5]
+##' one_link <- spanish_schools_ex()[1]
 ##' prep_browser(one_link)
 ##'
 ##' \dontrun{

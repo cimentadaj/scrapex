@@ -20,7 +20,7 @@ Prepare local HTML links to open with your browser
 library(xml2)
 library(scrapex)
 
-one_link <- spanish_schools_ex()[5]
+one_link <- spanish_schools_ex()[1]
 prep_browser(one_link)
 
 \dontrun{

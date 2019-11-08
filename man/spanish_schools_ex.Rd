@@ -30,7 +30,7 @@ real website.
 library(xml2)
 library(scrapex)
 
-one_link <- spanish_schools_ex()[5]
+one_link <- spanish_schools_ex()[1]
 
 read_html(one_link)
 

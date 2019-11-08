@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "cimentadaj@gmail.com",
            comment = c(ORCID = "0000-0001-5594-1156"))
-Description: By saving locally a variety of websites, this package offers real world examples for scraping websites which will be self-standing and available in the future. Forget about making scraping tutorial which will be obsolete 6 months from now: scrapex is meant to save them for eternity!
+Description: By saving locally a variety of websites, this package offers real world examples for scraping websites which will be self-standing and available in the future. Forget about making scraping tutorials which will be obsolete 6 months from now: scrapex is meant to save them for eternity!
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: es
