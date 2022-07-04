@@ -18,12 +18,12 @@ HTML links to the local HTML files that can be used as exercises for
 scraping some data.
 }
 \details{
-All images should work well out of the box except the Google maps on the
+Some images should not work well out of the box including the Google maps on the
 right. Please note that these websites are not meant
-to be used to reliably explore their hyperlink or other features, as
+to be used to reliably explore their hyperlinks or other features, as
 these will change inevitably when the website changes some of it's
 structures. This is because some of the links still point to the
-real website.
+real website or other platforms.
 }
 \examples{
 
