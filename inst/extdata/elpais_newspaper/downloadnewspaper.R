@@ -1,22 +1,28 @@
-retirement_link <- "https://english.elpais.com/"
+newspaper_link <- "https://english.elpais.com/"
 
 
 # download a complete page with wget
 # https://superuser.com/questions/55040/save-a-single-web-page-with-background-images-with-wget
-download_req <- paste0("wget -E -H -k -K -p ", retirement_link)
+download_req <- paste0("wget -E -H -k -K -p ", newspaper_link)
 
 system(download_req)
 
-file_cp <- list.files("en.wikipedia.org",
-  pattern = "\\.html",
+file_cp <- list.files("english.elpais.com",
+  pattern = "\\.html$",
   recursive = TRUE,
   full.names = TRUE
 )
 
 file.copy(
   file_cp,
-  "Retirement_in_Europe.html"
+  "elpais_newspaper.html"
 )
 
 # Remove all convoluted folder structure
-unlink(c("en.wikipedia.org", "upload.wikimedia.org"), recursive = TRUE)
+unlink(c(
+  "arcsubscriptions.elpais.com",
+  "ep00.epimg.net",
+  "static.elpais.com",
+  "contributor.google.com",
+  "english.elpais.com"
+), recursive = TRUE)

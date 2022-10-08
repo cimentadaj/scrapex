@@ -1,6 +1,0 @@
-var _tg = [{"oid": 73738,"ci": 453492,"cw": 1,"ch": 1,"typ": "html","li": 329245,"dnr": true,"iid": "p0d5a8dde298c739d74be5ea6886d3cbf2597eaa3b4","m": "Adsense","cd": "document.write('\\u003cscript\\u003ewindow.top.postMessage({ type: \\u0027iat-verification\\u0027 }, \\u0027*\\u0027);\\u003c/script\\u003e');"
-}];
-var _tgblk = { "m": 1, "iid": "p0d5a8dde298c739d74be5ea6886d3cbf2597eaa3b4"};
-setTimeout(function () {
-    document.close();
-}, 0);
