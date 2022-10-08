@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Ministerio de Economia</title>
+<meta name="ad.size" content="width=300,height=600">
+<link rel="stylesheet" type="text/css" href="index_data/main.css">
+
+<script src="index_data/gsap_3.5.1_min.js"></script>
+<script src="index_data/main.js" type="text/javascript"></script>
+
+    <script>
+        var clickTag = "http://www.google.com";
+
+        window.onload = function(){ 
+            init();
+        }
+    </script>
+
+<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head>
+<body>
+<div id="ad" onclick="window.open(window.clickTag)"> 
+
+    <div id="banner">
+
+        <div id="foto" style="opacity: 0; transform: rotate(0.01deg);"><img src="index_data/foto.png"></div>
+
+        <div id="linea" style="transform-origin: 50% 50% 0px; transform: translate(0px); opacity: 1;"></div>
+
+        <div id="txt1a" style="opacity: 1; transform: rotate(0.01deg);"><img src="index_data/txt1a.png"></div>
+        <div id="txt1b" style="opacity: 1; transform: rotate(0.01deg);"><img src="index_data/txt1b.png"></div>
+        <div id="txt2" style="opacity: 1; transform: rotate(0.01deg);"><img src="index_data/txt2.png"></div>
+        <div id="txt3" style="opacity: 1; transform: rotate(0.01deg);"><img src="index_data/txt3.png"></div>
+        <div id="txt4" style="opacity: 0; transform: translate(-3px);"><img src="index_data/txt4.png"></div>
+        
+        <div id="ico1"><img src="index_data/ico1.png"></div>
+        <div id="ico2"><img src="index_data/ico2.png"></div>
+        <div id="ico3"><img src="index_data/ico3.png"></div>
+        <div id="ico4"><img src="index_data/ico4.png"></div>
+
+        <div id="cta"><img src="index_data/cta.png"></div>
+
+        <div id="logos"><img src="index_data/logos.png"></div>
+    </div>
+</div>
+
+</body></html>

@@ -1,0 +1,6 @@
+(function () {var c = window.__tgconf = window.__tgconf || {};
+c.lockedId = c.locked && c.locked.iatId;
+c.messagingType = 'default';
+c.mawMessagingPath = 'https://maw-messaging.insurads.com/rt-maw/node';
+c.mawDefaultMessagingPath = 'https://maw-messaging.insurads.com/rt-maw/node';
+})();
