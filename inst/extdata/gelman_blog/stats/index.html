@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Statistical Modeling, Causal Inference, and Social Science	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/twentyeleven/style.css" />
+<link rel="pingback" href="https://statmodeling.stat.columbia.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://statmodeling.stat.columbia.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Statistical Modeling, Causal Inference, and Social Science &raquo; Feed" href="https://statmodeling.stat.columbia.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Statistical Modeling, Causal Inference, and Social Science &raquo; Comments Feed" href="https://statmodeling.stat.columbia.edu/comments/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/statmodeling.stat.columbia.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='moztheme2011-css'  href='wp-content/plugins/twenty-eleven-theme-extensions/moztheme2011.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--blue: #1982d1;--wp--preset--color--dark-gray: #373737;--wp--preset--color--medium-gray: #666;--wp--preset--color--light-gray: #e2e2e2;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('index.html');--wp--preset--duotone--grayscale: url('index.html');--wp--preset--duotone--purple-yellow: url('index.html');--wp--preset--duotone--blue-red: url('index.html');--wp--preset--duotone--midnight: url('index.html');--wp--preset--duotone--magenta-yellow: url('index.html');--wp--preset--duotone--purple-green: url('index.html');--wp--preset--duotone--blue-orange: url('index.html');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='wp-content/plugins/wp-to-twitter/css/twitter-feed.css' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='wp-content/themes/twentyeleven/blocks.css' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="https://statmodeling.stat.columbia.edu/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://statmodeling.stat.columbia.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://statmodeling.stat.columbia.edu/wp-includes/wlwmanifest.xml" /> 
+
+		<!-- GA Google Analytics @ https://m0n.co/ga -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-46652329-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+		<style>
+		/* Link color */
+		a,
+		#site-title a:focus,
+		#site-title a:hover,
+		#site-title a:active,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-title a:active,
+		.widget_twentyeleven_ephemera .comments-link a:hover,
+		section.recent-posts .other-recent-posts a[rel="bookmark"]:hover,
+		section.recent-posts .other-recent-posts .comments-link a:hover,
+		.format-image footer.entry-meta a:hover,
+		#site-generator a:hover {
+			color: #1a5ead;
+		}
+		section.recent-posts .other-recent-posts .comments-link a:hover {
+			border-color: #1a5ead;
+		}
+		article.feature-image.small .entry-summary p a:hover,
+		.entry-header .comments-link a:hover,
+		.entry-header .comments-link a:focus,
+		.entry-header .comments-link a:active,
+		.feature-slider a.active {
+			background-color: #1a5ead;
+		}
+	</style>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	</head>
+
+<body class="home blog custom-background wp-embed-responsive two-column right-sidebar">
+<div class="skip-link"><a class="assistive-text" href="index.html#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="index.html#secondary">Skip to secondary content</a></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.498039215686" /><feFuncG type="table" tableValues="0 0.498039215686" /><feFuncB type="table" tableValues="0 0.498039215686" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.549019607843 0.988235294118" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.717647058824 0.254901960784" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.278431372549" /><feFuncB type="table" tableValues="0.592156862745 0.278431372549" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.647058823529" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.780392156863 1" /><feFuncG type="table" tableValues="0 0.949019607843" /><feFuncB type="table" tableValues="0.352941176471 0.470588235294" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.650980392157 0.403921568627" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.447058823529 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.0980392156863 1" /><feFuncG type="table" tableValues="0 0.662745098039" /><feFuncB type="table" tableValues="0.847058823529 0.419607843137" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="index.html" rel="home">Statistical Modeling, Causal Inference, and Social Science</a></span></h1>
+				<h2 id="site-description"></h2>
+			</hgroup>
+
+			
+									<form method="get" id="searchform" action="index.html">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-46579" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-46579"><a href="index.html" aria-current="page">Home</a></li>
+<li id="menu-item-46580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46580"><a href="https://statmodeling.stat.columbia.edu/authors/">Authors</a></li>
+<li id="menu-item-46582" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46582"><a href="https://statmodeling.stat.columbia.edu/blogs-i-read/">Blogs We Read</a></li>
+<li id="menu-item-46584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46584"><a href="https://statmodeling.stat.columbia.edu/sponsors/">Sponsors</a></li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+			
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="https://statmodeling.stat.columbia.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-47933" class="post-47933 post type-post status-publish format-standard hentry category-zombies">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/16/mit-built-a-theranos-for-plants-update/" rel="bookmark">“MIT Built a Theranos for Plants” update</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/16/mit-built-a-theranos-for-plants-update/" title="9:31 am" rel="bookmark"><time class="entry-date" datetime="2022-10-16T09:31:46-04:00">October 16, 2022 9:31 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/16/mit-built-a-theranos-for-plants-update/#comments">1</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="https://statmodeling.stat.columbia.edu/2020/08/21/mit-built-a-theranos-for-plants/">Remember this</a> from a couple years ago?</p>
+<blockquote><p><a href="https://gizmodo.com/mit-built-a-theranos-for-plants-1837968240">This news article</a> by Tom McKay is hilarious:</p>
+<blockquote><p>The prestigious multidisciplinary MIT Media Lab built a “personal food computer” that worked so poorly that demos had to be faked Theranos-style . . . According to Business Insider, the project—a plastic hydroponic grow box filled with “advanced sensors and LED lights” that would supposedly make it possible to replicate crop conditions from any part of the global—was a sham, with MIT’s Open Agriculture Initiative director Caleb Harper resorting to faking demos . . . According to Business Insider, Harper directed an email requesting comment to an MIT spokesperson, who “didn’t provide a comment.”</p></blockquote>
+<p>No comment, huh?  The &#8220;Media Lab&#8221; should be able to do better than that, no?  If that&#8217;s all they can do, they could just as well hire <a href="https://statmodeling.stat.columbia.edu/2017/04/12/pizzagate-update-response-cornell-university-media-relations-office/">the media team from Cornell</a>.  You&#8217;re the goddam media lab, dudes:  you should be able to work with the media, no?</p>
+<p>Ahhh, MIT . . . <a href="https://statmodeling.stat.columbia.edu/2014/04/04/going-criticize-blog-im-just-tired-things-like-whats-really-horrible-news-article-takes-seriously-problem/">what&#8217;s happened</a> to you?  Lots has changed since 1986, I guess.</p></blockquote>
+<p>Palko shares <a href="https://twitter.com/SeiffertDon/status/1557755379756449796">this update</a> from journalist Don Seiffert, who writes:</p>
+<blockquote><p>More than two years ago, MIT quietly shut down one of its most high-profile research projects after allegations that the science being touted didn&#8217;t work. The school still hasn&#8217;t addressed the allegations, nor its oversight of the project, and now a new lawsuit alleges that school administrators were told of the problems more than a year before media reports on the Open Agriculture Initiative came to light. The lawsuit alleges that MIT used the project to burnish its reputation as one of the world&#8217;s top research organizations and to raise money. While the allegations of misrepresentation of research at OpenAg are not new, the episode was largely overshadowed by the Jeffrey Epstein scandal which occurred at the same time. . . .</p></blockquote>
+<p>Full story from Seiffert <a href="https://archive.ph/Ji6pJ">here</a>, including these juicy bits:</p>
+<blockquote><p>The lawsuit alleges that MIT ended [a former researcher&#8217;s] appointment at MIT “for complaining about and reporting research fraud and fraudulent fundraising activities,” and further claims that the university “knew at all times” that the central innovation of that research, called the food computer, “simply did not operate as it claimed.” . . .</p>
+<p>In a press release on April 3, 2019, the school listed OpenAg research funders, including Target Corp., Lee Kum Kee Health Products Group, Welspun, Sentient Technologies, and Cognizant Technology Solutions. . . . The director of the program, Caleb Harper, was invited by MIT President Rafael Reif in May 2016 “to participate in his Campaign for a Better World in New York and London, which sought billions of dollars of unrestricted funds for MIT,” according to the lawsuit . . . MIT has never publicly addressed the allegations of problems with its own internal controls or its oversight of the research, nor whether it has taken steps to ensure similar alleged exaggerations of research aren’t repeated in future projects. . . . </p></blockquote>
+<p>Hey!  Are they using <a href="https://statmodeling.stat.columbia.edu/2022/06/23/a-garland-of-retractions-for-the-ohio-state-department-of-chutzpah-cancer-biology-and-genetics/">Ohio State</a> as a model??  On the plus side, their <a href="https://statmodeling.stat.columbia.edu/2022/07/09/columbia-loses-its-no-2-spot-in-the-u-s-news-rankings/">U.S. News ranking data</a> probably aren&#8217;t being fudged, right?</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/zombies/" rel="category tag">Zombies</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/16/mit-built-a-theranos-for-plants-update/#comments"><b>1</b> Reply</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47933 -->
+
+				
+					
+	<article id="post-47854" class="post-47854 post type-post status-publish format-standard hentry category-bayesian-statistics category-economics category-political-science category-sociology">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/15/how-should-bayesian-methods-for-the-social-sciences-differ-from-bayesian-methods-for-the-physical-sciences-my-talk-at-the-bayesian-methods-for-the-social-sciences-workshop-21-oct-2022-paris/" rel="bookmark">How should Bayesian methods for the social sciences differ from Bayesian methods for the physical sciences? (my talk at the Bayesian Methods for the Social Sciences workshop, 21 Oct 2022, Paris)</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/15/how-should-bayesian-methods-for-the-social-sciences-differ-from-bayesian-methods-for-the-physical-sciences-my-talk-at-the-bayesian-methods-for-the-social-sciences-workshop-21-oct-2022-paris/" title="9:08 am" rel="bookmark"><time class="entry-date" datetime="2022-10-15T09:08:51-04:00">October 15, 2022 9:08 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/15/how-should-bayesian-methods-for-the-social-sciences-differ-from-bayesian-methods-for-the-physical-sciences-my-talk-at-the-bayesian-methods-for-the-social-sciences-workshop-21-oct-2022-paris/#comments">3</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The title of the workshop is Bayesian Methods for the Social Sciences, so it makes sense to ask what&#8217;s so special about the social sciences.</p>
+<p>At first I was thinking of comparing the social sciences to the natural sciences, but I think that social sciences such as political science, economics, and sociology have a lot in common with biological sciences and medicine, along with in-between sciences such as psychology:  all of these are characterized by high variability, measurement challenges, and difficulty in matching scientific theories to mathematical or statistical models.</p>
+<p>So I decided that the more interesting comparison is to the <em>physical sciences</em>, where variability tends to be lower, or at least better behaved (for example, shot noise or Brownian motion).  In the social sciences, statistical models&#8212;Bayesian or otherwise&#8212;have a lot more subjectivity, a lot more researcher degrees of freedom.  In theory, Bayesian inference should work for any problem, but it has a different flavor when our models can be way off and there can be big gaps between actual measurements and the goals of measurements.</p>
+<p>So I think there will be lots to say on this topic.  I&#8217;m hoping the conf will be in French so that I&#8217;m forced to speak slowly.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/" rel="category tag">Bayesian Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/economics/" rel="category tag">Economics</a>, <a href="https://statmodeling.stat.columbia.edu/category/political-science/" rel="category tag">Political Science</a>, <a href="https://statmodeling.stat.columbia.edu/category/sociology/" rel="category tag">Sociology</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/15/how-should-bayesian-methods-for-the-social-sciences-differ-from-bayesian-methods-for-the-physical-sciences-my-talk-at-the-bayesian-methods-for-the-social-sciences-workshop-21-oct-2022-paris/#comments"><b>3</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47854 -->
+
+				
+					
+	<article id="post-48088" class="post-48088 post type-post status-publish format-standard hentry category-art">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/14/hey-heres-a-surprisingly-fascinating-discussion-of-copyright-of-transformed-images/" rel="bookmark">Hey!  Here&#8217;s a surprisingly fascinating discussion of copyright of transformed images!</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/14/hey-heres-a-surprisingly-fascinating-discussion-of-copyright-of-transformed-images/" title="9:13 am" rel="bookmark"><time class="entry-date" datetime="2022-10-14T09:13:02-04:00">October 14, 2022 9:13 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/14/hey-heres-a-surprisingly-fascinating-discussion-of-copyright-of-transformed-images/#comments">3</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I don&#8217;t usually just link to stuff on our blogroll&#8212;after all, you can just <a href="https://statmodeling.stat.columbia.edu/blogs-i-read/">go there</a> and check things out whenever you want&#8212;but <a href="https://thepatronsaintofsuperheroes.wordpress.com/2022/10/10/scotus-meaningfully-transformative-v-recognizably-derivative/">this post by Chris Gavaler</a> was really interesting so I wanted to share it with you.</p>
+<p>It features:</p>
+<p>Lynne Goldsmith<br />
+Prince<br />
+Andy Warhol<br />
+the U.S. Supreme Court<br />
+Marilyn Monroe<br />
+Eugene Korman<br />
+somebody named Soglin<br />
+Barack Obama<br />
+Mannie Garcia<br />
+Shepard Fairey<br />
+Miles Davis<br />
+Jay Maisel<br />
+Andy Baio<br />
+swipers in comics<br />
+Pablo Picasso<br />
+Angela Corey<br />
+Rick Wilson<br />
+George Zimmerman</p>
+<p>Interesting and thoughtful, with lots of pictures.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/art/" rel="category tag">Art</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/14/hey-heres-a-surprisingly-fascinating-discussion-of-copyright-of-transformed-images/#comments"><b>3</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48088 -->
+
+				
+					
+	<article id="post-47423" class="post-47423 post type-post status-publish format-standard hentry category-causal-inference category-miscellaneous-statistics category-sports category-zombies">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/" rel="bookmark">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/" title="9:46 am" rel="bookmark"><time class="entry-date" datetime="2022-10-13T09:46:58-04:00">October 13, 2022 9:46 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comments">46</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I&#8217;m a <a href="https://www.baseballprospectus.com/news/article/13810/baseball-proguestus-a-statistician-rereads-bill-james/">big fan</a> of Bill James, but I think he might be picking up the wrong end of the stick here.</p>
+<p>The great baseball analyst <a href="https://web.archive.org/web/20220426120747/https://www.billjamesonline.com/the_law_of_competitive_balance_redux/">writes about</a> what he calls the Law of Competitive Balance.  His starting point is that teams that are behind are motivated to work harder to have a chance of winning, which moves them to switch to high-variance strategies such as long passes in football (more likely to score a touchdown, also more likely to get intercepted), etc.  Here&#8217;s Bill James:</p>
+<blockquote><p>Why was there an increased chance of a touchdown being thrown? </p>
+<p>Because the team was behind.</p>
+<p>Because the team was behind, they had an increased NEED to score.</p>
+<p>Because they had an increased need to score points, they scored more points. </p>
+<p>That is one of three key drivers of The Law of Competitive Balance:  that success increases when there is an increased need for success.   This applies not merely in sports, but in every area of life.  But in the sports arena, it implies that the sports universe is asymmetrical. . . .</p>
+<p>Because this is true, the team which has the larger need is more willing to take chances, thus more likely to score points.  The team which is ahead gets conservative, predictable, limited.  This moves the odds.   The team which, based on their position, would have a 90% chance to win doesn’t actually have a 90% chance to win.  They may have an 80% chance to win; they may have an 88% chance to win, they may have an 89.9% chance to win, but not 90.</p></blockquote>
+<p>I think he&#8217;s mixing a correct point here with an incorrect point.</p>
+<p>James&#8217;s true statement is that, as he puts it, &#8220;there is an imbalance in the motivation of the two teams, an imbalance in their willingness to take risks.&#8221;  The team that&#8217;s behind is motivated to switch to strategies that increase the variance of the score differential, even at the expense of lowering its expected score differential.  Meanwhile, the team that&#8217;s ahead is motivated to switch to strategies that decrease the variance of the score differential, even at the expense of lowering <em>its</em> expected score differential.  In basketball, it can be as simple as the team that&#8217;s behind pushing up the pace and the team that&#8217;s ahead slowing things down.  The team that&#8217;s trailing is trying to have some chance of catching up&#8212;their goal is to win, not to lose by a smaller margin; conversely, the team that&#8217;s in the lead is trying to minimize the chance of the score differential going to zero, not to run up the score.  As James says, these patterns are averages and won&#8217;t occur from play to play.  Even if you&#8217;re behind by 10 in a basketball game with 3 minutes to play, you&#8217;ll still take the open layup rather than force the 3-pointer, and even if you&#8217;re ahead by 10, you&#8217;ll still take the open shot with 20 seconds left on the shot clock rather than purely trying to eat up time.  But on average the logic of the game leads to different strategies for the leading and trailing teams, and that will have consequences on the scoreboard.</p>
+<p>James&#8217;s mistake is to think, when this comes to probability of winning, that this dynamic on balance favors the team that&#8217;s behind.  When strategies are flexible, the team that&#8217;s behind does not necessarily increase its probability of winning relative to what that probability would be if team strategies were constant.  Yes, the team that&#8217;s behind will use strategies to increase the probability of winning, but the team that&#8217;s ahead will alter its strategy too.  Speeding up the pace of play should, on average, increase the probability of winning for the trailing team (for example, increasing the probability from, I dunno, 10% to 15%), but meanwhile the team that&#8217;s ahead is slowing down the pace of play, which should send that probability back down.  On net, will this favor the leading team or the trailing team when it comes to win probability?  It will depend on the game situation.  In some settings (for example, a football game where the team that&#8217;s ahead has the ball on first down with a minute left), it will favor the team that&#8217;s ahead.  In other settings it will go the other way.</p>
+<p>James continues:</p>
+<blockquote><p>That is one of the three key drivers of the Law of Competitive Balance.  The others, of course, are adjustments and effort.  When you’re losing, it is easier to see what you are doing wrong.  Of course a good coach can recognize flaws in their plan of attack even when they are winning, but when you’re losing, they beat you over the head.</p></blockquote>
+<p>I don&#8217;t know about that.  As a coach myself, I could just as well argue the opposite point, as follows.  When you&#8217;re winning, you can see what works while having the freedom to experiment and adapt to fix what doesn&#8217;t work.  But when you&#8217;re losing, it can be hard to know where to start or have a sense of what to do to improve.</p>
+<p>Later on in his post, James mentions that, when you&#8217;re winning, part of that will be due to situational factors that won&#8217;t necessarily repeat.  The quick way to say that is that, when you&#8217;re winning, part of your success is likely to be from &#8220;luck&#8221;; a formulation that I&#8217;m OK with as long as we take this term generally enough to refer to factors that don&#8217;t necessarily repeat, such as pitcher/batter matchups, to take an example from James&#8217;s post.</p>
+<p>But James doesn&#8217;t integrate this insight into his understanding of the law of competitive balance.  Instead, he writes:</p>
+<blockquote><p>If a baseball team is 20 games over .500 one year, they tend to be 10 games over the next.   If a team is 20 games under .500 one year, they tend to be 10 games under the next year.  If a team improves by 20 games in one year (even from 61-101 to 81-81) they tend to fall back by 10 games the next season.   If they DECLINE by 10 games in a year, they tend to improve by 5 games the next season. </p>
+<p>I began to notice similar patterns all over the map.   If a batter hits .250 one year and .300 the next, he tends to hit about .275 the third year.  Although I have not demonstrated that similar things happen in other sports, I have no doubt that they do.   I began to wonder if this was actually the same thing happening, but in a different guise.  You get behind, you make adjustments.  You lose 100 games, you make adjustments.  You get busy.  You work harder.  You take more chances.  You win 100 games, you relax.  You stand pat.</p></blockquote>
+<p>James&#8217;s description of the data is fine; his mistake is to attribute these changes to teams &#8220;making adjustments&#8221; or &#8220;standing pat.&#8221;  That could be, but it could also be that teams that win 100 games &#8220;push harder&#8221; and that teams that lose 100 games &#8220;give up.&#8221;  The real point is statistical, which is that this sort of &#8220;regression to the mean&#8221; will happen without any such adjustment effects, just from &#8220;luck&#8221; or &#8220;random variation&#8221; or varying situational factors.</p>
+<p>Here&#8217;s a famous example from Tversky and Kahneman (1973):</p>
+<blockquote><p>The instructors in a flight school adopted a policy of consistent positive reinforcement recommended by psychologists. They verbally reinforced each successful execution of a flight maneuver. After some experience with this training approach, the instructors claimed that contrary to psychological doctrine, high praise for good execution of complex maneuvers typically results in a decrement of performance on the next try.</p></blockquote>
+<p>Actually, though:</p>
+<blockquote><p>Regression is inevitable in flight maneuvers because performance is not perfectly reliable and progress between successive maneuvers is slow. Hence, pilots who did exceptionally well on one trial are likely to deteriorate on the next, regardless of the instructors&#8217; reaction to the initial success. The experienced flight instructors actually discovered the regression but attributed it to the detrimental effect of positive reinforcement.</p></blockquote>
+<p>&#8220;Performance is not perfectly reliable and progress between successive maneuvers is slow&#8221;:  That describes pro sports!</p>
+<p>As we write in Regression and Other Stories, the point here is that a <em>quantitative</em> understanding of prediction clarifies a fundamental <em>qualitative</em> confusion about variation and causality.  From purely mathematical considerations, it is expected that the best pilots will decline, relative to the others, while the worst will improve in their rankings, in the same way that we expect daughters of tall mothers to be, on average, tall but not quite as tall as their mothers, and so on.</p>
+<p>I was surprised to see Bill James make this mistake.  All the years I&#8217;ve read him writing about the law of competitive balance and the plexiglass principle, I always assumed that he&#8217;d understood this as an inevitable statistical consequence of variation without needing to try to attribute it to poorly-performing teams trying harder etc.</p>
+<p><strong>How did he get this one so wrong?  Here are 6 reasons.</strong></p>
+<p>This raises a new question, which is how could such a savvy analyst make such a basic mistake?  I have six answers:</p>
+<p>1.  Multiplicity.  Statistics is <a href="https://statmodeling.stat.columbia.edu/2016/03/11/statistics-is-like-basketball-or-knitting/">hard</a>, and if you do enough statistics, you&#8217;ll eventually make some mistakes.  I make mistakes too!  It just happens that this &#8220;regression to the mean&#8221; fallacy is a mistake that James made.</p>
+<p>2.  It&#8217;s a <em>basic</em> mistake and an <em>important</em> mistake, but it&#8217;s not a <em>trivial</em> mistake.  Regression to the mean is a notoriously difficult topic to teach (you can cruise over to chapter 6 of <a href="http://www.stat.columbia.edu/~gelman/regression/">our book</a> and see how we do; maybe not so great!).</p>
+<p>3.  Statistics textbooks, including my own, are full of boring details, so I can see that, whether or not Bill James has read any such books, he wouldn&#8217;t get so much out of them.</p>
+<p>4.  In his attribution of regression to the mean, James is making an error of <em>causal reasoning</em> and a <em>modeling</em> error, but it&#8217;s not a <em>prediction</em> error.  The law of competitive balance and the plexiglass principle give valid predictions, and they represent insights that were not widely available in baseball (and many other fields) before James came along.  Conceptual errors aside, James was still moving the ball forward, as it were.  When he goes beyond prediction in his post, for example making strategy recommendations, I&#8217;m doubtful, but I&#8217;m guessing that the main influence on readers of his &#8220;law of competitive balance&#8221; is to the predictive part.</p>
+<p>5.  Hero worship.  The man is a living legend.  That&#8217;s great&#8212;he deserves all his fame&#8212;but the drawback is that maybe it&#8217;s a bit too easy for him to fall for his own hype and not question himself or fully hear criticism.  We&#8217;ve seen the same thing happen with baseball and political analyst Nate Silver, who continues to do excellent work but sometimes can&#8217;t seem to digest feedback from outsiders.</p>
+<p>6.  Related to point 5 is that James made his breakthroughs by fighting the establishment.  For many decades he&#8217;s been saying outrageous things and standing up for his outrageous claims even when they&#8217;ve been opposed by experts in the field.  So he keeps doing it, which in some ways is great but can also lead him astray, by trusting his intuitions too much and not leaving himself more open for feedback.</p>
+<p>I guess we could say that, in sabermetrics, James was on a winning streak for a long time so he relaxes. He stands pat.  He has less motivation to see what&#8217;s going wrong.</p>
+<p><strong>P.S.</strong>  Again, I&#8217;m a big fan of Bill James.  It&#8217;s interesting when smart people make mistakes.  When dumb people make mistakes, that&#8217;s boring.  When someone who&#8217;s thought so much about statistics makes such a basic statistical error, that&#8217;s interesting to me.  And, as noted in item 4 above, I can see how James could have this misconception for decades without it having much negative effect on his work.</p>
+<p><strong>P.P.S.</strong>  Just to clarify:  Bill James made two statements.  The first was predictive and correct; the second was causal and misinformed.</p>
+<p>His first, correct statement is that there is &#8220;regression to the mean&#8221; or &#8220;competitive balance&#8221; or &#8220;plexiglas&#8221; or whatever you want to call it:  players or teams that do well in time 1 tend to decline in time 2, and players or teams that do poorly in time 2 tend to improve in time 2.  This statement, or principle, is correct, and it can be understood as a general mathematical or statistical pattern that arises when correlations are less than 100%.  This pattern is not always true&#8212;it depends on the joint distribution of the before and after measurements (<a href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104254">see here</a>) but it is typically the case.</p>
+<p>His second, misinformed statement is that this is caused by players or teams that are behind at time 1 being more innovative or trying harder and players or teams that are ahead at time 2 being complacent or standing pat.  This statement is misinformed because the descriptive phenomenon of regression-to-the-mean or competitive-balance or plexiglas will happen even in the absence of any behavioral changes.  And, as discussed in the above post, behavioral changes can go in either direction; there&#8217;s no good reason to think that, when both teams perform strategic adjustments, that these adjustments on net will benefit the team that&#8217;s behind.</p>
+<p>This is all difficult because it is natural to observe the first, correct predictive statement and from this to mistakenly infer the second, misinformed causal statement.  Indeed this inference is such a common error that it is a major topic in statistics and is typically covered in introductory texts. We devote a whole chapter to it in Regression and Other Stories, and if you&#8217;re interested in understanding this I recommend you read chapter 6; the book is <a href="http://www.stat.columbia.edu/~gelman/regression/">freely available online</a>.</p>
+<p>For the reasons discussed above, I&#8217;m not shocked that Bill James made this error:  for his purposes, the predictive observation has been more important than the erroneous causal inference, and he figured this stuff out on his own, without the benefit or hindrance of textbooks, and given his past success as a rebel, I can see how it can be hard for him to accept when outsiders point out a subtle mistake. But, as noted in the P.S. above, when smart people get things wrong, it&#8217;s interesting; hence this post.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/causal-inference/" rel="category tag">Causal Inference</a>, <a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-statistics/" rel="category tag">Miscellaneous Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/sports/" rel="category tag">Sports</a>, <a href="https://statmodeling.stat.columbia.edu/category/zombies/" rel="category tag">Zombies</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comments"><b>46</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47423 -->
+
+				
+					
+	<article id="post-48077" class="post-48077 post type-post status-publish format-standard hentry category-bayesian-statistics category-stan category-statistical-computing tag-open-source">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/12/0-to-100k-users-in-10-years-how-stan-got-to-where-it-is/" rel="bookmark">0 to 100K users in 10 years:  how Stan got to where it is</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/12/0-to-100k-users-in-10-years-how-stan-got-to-where-it-is/" title="3:00 pm" rel="bookmark"><time class="entry-date" datetime="2022-10-12T15:00:29-04:00">October 12, 2022 3:00 PM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/bob_carpenter/" title="View all posts by Bob Carpenter" rel="author">Bob Carpenter</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/12/0-to-100k-users-in-10-years-how-stan-got-to-where-it-is/#comments">5</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I did a talk at Simons Foundation on how Stan was initially developed and how it got to where it is today:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=P9gDFHl-Hss">0 to 100K in 10 years: nurturing an open-source software community</a> [YouTube]
+</ul>
+<p>It was the first time I&#8217;d presented this and I was having so much fun I ran out of time near the end.  If you&#8217;d like to go more slowly, here&#8217;s</p>
+<ul>
+<li><a href="https://statmodeling.stat.columbia.edu/wp-content/uploads/2022/10/fi-seminar-carpenter-june-2022.pdf">slides for the talk</a> [.pdf]
+</ul>
+<p>Also, here&#8217;s a direct link to the the TV clip that was played near the start of the talk.</p>
+<ul>
+<li><a href="https://twitter.com/betanalpha/status/999106548688400384">Stan and Julia mentioned on <I>Billions</I></a> [Twitter]
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/" rel="category tag">Bayesian Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/stan/" rel="category tag">Stan</a>, <a href="https://statmodeling.stat.columbia.edu/category/statistical-computing/" rel="category tag">Statistical computing</a>			</span>
+							
+										<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://statmodeling.stat.columbia.edu/tag/open-source/" rel="tag">open source</a>			</span>
+							
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/12/0-to-100k-users-in-10-years-how-stan-got-to-where-it-is/#comments"><b>5</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48077 -->
+
+				
+					
+	<article id="post-47185" class="post-47185 post type-post status-publish format-standard hentry category-causal-inference category-economics category-miscellaneous-statistics category-political-science category-zombies">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/12/blogs-twitter-again/" rel="bookmark">Blogs > Twitter again</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/12/blogs-twitter-again/" title="9:11 am" rel="bookmark"><time class="entry-date" datetime="2022-10-12T09:11:48-04:00">October 12, 2022 9:11 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/12/blogs-twitter-again/#comments">17</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>As we&#8217;ve discussed many times, I <a href="https://statmodeling.stat.columbia.edu/2014/11/22/blogs-twitter/">prefer blogs to twitter</a> because in a blog you can have a focused conversation where you explain your ideas in detail, whereas twitter seems like more of a place for position-taking.</p>
+<p>An example came up recently that demonstrates this point.  Jennifer sent me a blurb for her causal inference conference and I <a href="https://statmodeling.stat.columbia.edu/2022/02/16/welcome-to-the-american-causal-inference-conference-2022-data-challenge/">blogged it</a>.  This was an announcement and not much more; it could&#8217;ve been on twitter without any real loss of information.  A commenter then <a href="https://statmodeling.stat.columbia.edu/2022/02/16/welcome-to-the-american-causal-inference-conference-2022-data-challenge/#comment-2045114">shot back</a>:</p>
+<blockquote><p>Do you see how your policies might possibly negatively impact an outlier such as myself, when you arbitrarily reward contestants for uncovering effects you baked in? How do you know winners just haven’t figured out how you think about manipulating data to find effects? How far removed from my personal, actual, non-ergodic life are your statistical stories, and what policies that impede me unintentionally are you contributing to?</p></blockquote>
+<p>OK, this has more words than your typically twitter post, but if I saw it on twitter I&#8217;d be cool with it: it&#8217;s an expression of strong disagreement.</p>
+<p>It&#8217;s the next step where things get interesting.  When I saw the above comment, my quick reaction is, &#8220;What a crank!&#8221;  And of course I have no duty to respond at all; responding to blog comments is something I can do for fun when I have the time for it:  it can be helpful to explore the limits of what can be communicated.  In a twitter setting I think the appropriate response would be some snappy response.</p>
+<p>But this is a blog, not twitter, so I replied as follows:</p>
+<blockquote><p>That’s a funny way of putting things! I’d say that if you don’t buy the premise of this competition, then you don’t have to play. Kinda like if you aren’t interested in winter sports you don’t need to watch the olympics right now. I guess you might reply that our tax money is (indirectly) funding this competition, but then again our tax money funds the olympics too.</p>
+<p>Getting to the topic at hand: No, I don’t know that the research resulting from this sort of competition will ultimately improve education policy. Or, even if does, it presumably won’t improve everyone’s education, and it could be that students who are similar to you in some ways will be among those who end up with worse outcomes. All I can say is that this sort of question&#8212;variation in treatment effects, looking at effects on individuals, not just on averages&#8212;is a central topic of modern causal inference and has been so for awhile. So, to the extent that you’re interested in evaluating policies in this way, I think this sort of competition is going in the right direction.</p>
+<p>Regarding specifics: I think that after the competition is over, the team that constructed it will publicly release the details of what they did. So at that point in the not-so-distant future, you can take a look, and, if you see problems with it, you can publish your criticisms. That could be useful.</p></blockquote>
+<p>I&#8217;m not saying this response of mine was perfect.  I&#8217;m just saying that the blog format was well suited to a thoughtful response, a deepening of the intellectual exchange and a rhetorical de-escalation, which is kind of the opposite of position-taking on twitter.</p>
+<p><strong>P.S.</strong>  Also relevant is <a href="https://robjhyndman.com/hyndsight/forecasting-competitions/">this post by Rob Hyndman</a>, A brief history of time series forecasting competitions.  I don&#8217;t know anything about the history of causal inference competitions, or the extent to which these were inspired by forecasting competitions.  The same general question arise, of what&#8217;s being averaged over. </p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/causal-inference/" rel="category tag">Causal Inference</a>, <a href="https://statmodeling.stat.columbia.edu/category/economics/" rel="category tag">Economics</a>, <a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-statistics/" rel="category tag">Miscellaneous Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/political-science/" rel="category tag">Political Science</a>, <a href="https://statmodeling.stat.columbia.edu/category/zombies/" rel="category tag">Zombies</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/12/blogs-twitter-again/#comments"><b>17</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47185 -->
+
+				
+					
+	<article id="post-47589" class="post-47589 post type-post status-publish format-standard hentry category-political-science category-sociology category-zombies">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/11/depressingly-unbothered/" rel="bookmark">&#8220;Depressingly unbothered&#8221;</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/11/depressingly-unbothered/" title="9:24 am" rel="bookmark"><time class="entry-date" datetime="2022-10-11T09:24:31-04:00">October 11, 2022 9:24 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/11/depressingly-unbothered/#comments">13</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I just finished listening to the <a href="https://www.nytimes.com/interactive/2022/podcasts/trojan-horse-affair.html">Trojan Horse Affair</a> podcast, and . . . ok, you might have heard about it already, it&#8217;s the story of a ridiculous hoax leading to a horrible miscarriage of justice . . . I agree with Brian Reed, the co-host of the show, when he says this near the end of the final episode:</p>
+<blockquote><p>Rarely is there one big revelation that undoes years of misinformation and untruth. Most decent journalism is an exercise in incremental understanding. The Trojan Horse letter though, even with my [Reed&#8217;s] tempered expectations, I was surprised by how willing people have been to let it stand unchallenged. People are depressingly unbothered that this harmful myth about Muslims persists.</p></blockquote>
+<p>This reminds me of something we&#8217;ve discussed before, that an important aspect of being a scientist is <a href="https://statmodeling.stat.columbia.edu/2016/06/06/29188/">the capacity for being upset</a>.  We learn so much through the recognition and resolution of anomalies.</p>
+<p>Like Reed, I&#8217;m upset by people not getting upset by clear anomalies.  This annoyed me when New York Times columnist David Brooks <a href="https://statmodeling.stat.columbia.edu/2015/06/16/the-david-brooks-files-how-many-uncorrected-mistakes-does-it-take-to-be-discredited/">promoted</a> anti-Jewish propaganda and nobody seemed to care.  (I wasn&#8217;t saying Brooks should be fired or fined or anything like that, just that the newspaper should run a goddam correction notice.)  And it annoys me when the British national and local government promotes anti-Muslim propaganda and nobody in charge seems to care.  I guess I can also say that I&#8217;m also bothered when Fox News pushes lies, but that&#8217;s a little different because they&#8217;re just in the propaganda business.  We get worked up in a different way about Brooks and the U.K. government because it doesn&#8217;t seem like their original goal is to lie; rather, they act as a sort of flypaper, attracting stories that fit their preconceptions and then sticking with them even after they&#8217;ve been refuted.</p>
+<p>Anyway, to return to the title of this post:  in addition to being bothered by lies, I&#8217;m bothered by how unbothered people are about them.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/political-science/" rel="category tag">Political Science</a>, <a href="https://statmodeling.stat.columbia.edu/category/sociology/" rel="category tag">Sociology</a>, <a href="https://statmodeling.stat.columbia.edu/category/zombies/" rel="category tag">Zombies</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/11/depressingly-unbothered/#comments"><b>13</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47589 -->
+
+				
+					
+	<article id="post-47181" class="post-47181 post type-post status-publish format-standard hentry category-economics category-political-science category-sociology">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/10/quantitative-science-is-indirectly-relevant-to-the-real-world-also-some-comments-on-the-case-against-education/" rel="bookmark">Quantitative science is (indirectly) relevant to the real world, also some comments on a book called The Case Against Education</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/10/quantitative-science-is-indirectly-relevant-to-the-real-world-also-some-comments-on-the-case-against-education/" title="9:49 am" rel="bookmark"><time class="entry-date" datetime="2022-10-10T09:49:49-04:00">October 10, 2022 9:49 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/10/quantitative-science-is-indirectly-relevant-to-the-real-world-also-some-comments-on-the-case-against-education/#comments">92</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Joe Campbell points to <a href="https://www.econlib.org/no-one-cared-about-my-spreadsheets/">this post</a> by economist Bryan Caplan, who writes:</p>
+<blockquote><p>The most painful part of writing The Case Against Education was calculating the return to education.  I spent fifteen months working on the spreadsheets.  I came up with the baseline case, did scores of “variations on a theme,”  noticed a small mistake or blind alley, then started over. . . .  About half a dozen friends gave up whole days of their lives to sit next to me while I gave them a guided tour of the reasoning behind my number-crunching. . . . When the book finally came out, I published final versions of all the spreadsheets . . . </p>
+<p>Now guess what?  Since the 2018 publication of The Case Against Education, precisely zero people have emailed me about those spreadsheets. . . . Don’t get me wrong; The Case Against Education drew plenty of criticism.  Almost none of it, however, was quantitative. . . .</p>
+<p>It’s hard to avoid a disheartening conclusion: Quantitative social science is barely relevant in the real world – and almost every social scientist covertly agrees.  The complex math that researchers use is disposable.   You deploy it to get a publication, then move on with your career.  When it comes time to give policy advice, the math is AWOL.  If you’re lucky, researchers default to common sense.  Otherwise, they go with their ideology and status-quo bias, using the latest prestigious papers as fig leaves.</p></blockquote>
+<p>Regarding the specifics, I suspect that commenter Andrew (no relation) has a point when he <a href="https://www.econlib.org/no-one-cared-about-my-spreadsheets/#comment-291132">responded</a>:</p>
+<blockquote><p>You didn’t waste your time. If you had made your arguments without the spreadsheets&#8212;just guesstimating &#038; eyeballing, you would’ve gotten quantitative criticism. A man who successfully deters burglars didn’t waste his money on a security system just because it never got used.</p></blockquote>
+<p>But then there&#8217;s the general question about quantitative social science.  I actually wrote a post on this topic last year, <a href="https://statmodeling.stat.columbia.edu/2021/03/12/the-social-sciences-are-useless-so-why-do-we-study-them-heres-a-good-reason/">The social sciences are useless. So why do we study them? Here’s a good reason</a>.  Here was my summary:</p>
+<blockquote><p>The utilitarian motivation for the natural sciences is that can make us healthier, happier, and more comfortable. The utilitarian motivation for the social sciences is they can protect us from bad social-science reasoning. It’s a lesser thing, but that’s what we’ve got, and it’s not nothing.</p></blockquote>
+<p>That post stirred some people up, as it sounded like I was making some techbro-type argument that society didn&#8217;t matter.  But I wasn&#8217;t saying that <em>society</em> was useless, I was saying that <em>social science</em> was useless, at least relative to the natural sciences.  Some social science research is really cool, but it&#8217;s nothing compared to natural-science breakthroughs such as transistors, plastics, vaccines, etc.</p>
+<p>Anyway, my point is that quantitative social science has value in that it can displace empty default social science arguments.  Caplan is disappointed that people didn&#8217;t engage with his spreadsheets, but I think that&#8217;s partly because he was presenting his ideas in book form.  My colleagues and I had a similar experience with our Red State Blue State book a few years ago:  our general point got out there, but people didn&#8217;t seem to really engage with the details.  We had lots of quantitative analyses in there, but it was a book, so people weren&#8217;t expecting to engage in that way.  Frustrating, but it would be a mistake to generalize from that experience to all of social science.  If you want people to engage with your spreadsheets, I think you&#8217;re better off publishing an article rather than a book.</p>
+<p>As a separate matter, Caplan&#8217;s &#8220;move on with your career&#8221; statement is all too true, but that&#8217;s a separate issue.  Biology, physics, electrical engineering, etc., are all undeniably useful, but researchers in these fields also move on with their careers, etc.  That just is telling us that research doesn&#8217;t have 100% efficiency, which is a product of the decentralized system that we have.  It&#8217;s not like WW2 where the government was assigning people to projects.</p>
+<p><strong>Comments on The Case Against Education</strong></p>
+<p>This discussion reminded me that six years ago Caplan sent me a draft of his book, and I sent him comments.  I might as well share them here:</p>
+<blockquote><p>1.  Your intro is fine, it’s good to tell the reader where you’re coming from.  But . . . the way it’s framed, it looks a bit like the “professors are pampered” attack on higher education.  I don’t think this is the tack you want to be taking, for two reasons:  First, most teaching jobs are not like yours:  most teaching jobs are at the elementary or secondary level, and even at the college level, much of the teaching is done by adjuncts.  So, while your presentation of _your_ experience is valid, it’s misleading if it is taken as a description of the education system in general.  Second—and I know you’re aware of this too—if education were useful, there’d be no good reason to complain that some of its practitioners have good working conditions.  Again, this does not affect your main argument but I think you want to avoid sounding like the proudly-overpaid guy discussed here:  http://andrewgelman.com/2011/06/01/the_cushy_life/</p>
+<p>This comes up again in your next chapter where you say you have very few skills and that “The stereotype of the head-in-the-clouds Ivory Tower professor is funny because it’s true.”  Ummm, I don’t know about that.  The stereotype of the head-in-the-clouds Ivory Tower professor is not so true, in the statistical sense.  The better stereotype might be that adjunct working 5 jobs.</p>
+<p>2.  You write, “Junior high and high schools add higher mathematics, classic literature, and foreign languages – vital for a handful of budding scientists, authors, and translators, irrelevant for everyone else.”  This seems pretty extreme.  One point of teaching math—even the “higher mathematics” that is taught in high school—is to give people the opportunity to find out that they are “budding scientists” or even budding accountants.  As to “authors,” millions of people are authors:  you’ve heard of blogs, right?  It can useful to understand how sentences, paragraphs, and chapters are put together, even if you’re not planning to be Joyce Carol Oates.  As to foreign languages:  millions of people speak multiple languages, it’s a way of understand the world that I think is very valuable.  If _you_ want to say that you’re happy only speaking one language, or that many other people are happy speaking just one language, that’s fine—but I think it’s a real plus to give kids the opportunity to learn to speak and read in other languages.  Now, at this point you might argue that most education in math, literature, and foreign language is crappy—that’s a case you can make, but I think you’re way overdoing it my minimizing the value of these subjects.</p>
+<p>3.  Regarding signaling:  Suppose I take a biology course at a good college and get an A, but I don’t go into biology.  Still, the A contributes to my GPA and to my graduation from the good college, which is a job signal.  You might count this as part of the one-third signaling.  But that would be a mistake!  You’re engaging in retrospective reasoning.  Even if I never use that biology in my life, I didn’t know that when took the course.  Taking that bio course was an investment.  I invest the time and effort to learn some biology in order to decide whether to do more of it.  And even if I don’t become a biologist I might end up working in some area that uses biology.  I won’t know ahead of time.  This is not a new idea, it’s the general principle of a “well-rounded education,” which is popular in the U.S. (maybe not so much in Europe, where their post-secondary education is more focused on a student’s major.)  Also relevant on this “signaling” point is this comment:  http://andrewgelman.com/2011/02/17/credentialism_a/#comment-58035</p>
+<p>4.  Also, signaling is complicated and even non-monotonic!  Consider this example (which I wrote up here:  http://andrewgelman.com/2011/02/17/credentialism_a/):<br />
+&#8220;My senior year I applied to some grad schools (in physics and in statistics) and to some jobs. I got into all the grad schools and got zero job interviews. Not just zero jobs. Zero interviews. And these were not at McKinsey, Goldman Sachs, etc. (none of which I’d heard of). They were places like TRW, etc. The kind of places that were interviewing MIT physics grads (which is how I thought of applying for these jobs in the first place). And after all, what could a company like that do with a kid with perfect physics grades from MIT? Probably not enough of a conformist, eh?”<br />
+This is not to say your signaling story is wrong, just that I think it’s much more complicated than you’re portraying.</p>
+<p>5.  This is a minor point, but you write, “If the point of education is certifying the quality of labor, society would be better off if we all got less.”  This is not so clear.  From psychometric principles, more information will allow better discrimination.  It’s naive to think of all students as being ranked on a single dimension so that employers just need to pick from the “top third.”  There are many dimensions of abilities and it could take a lot of courses at different levels to make the necessary distinctions.  Again, this isn’t central to your argument but you just have to be careful here because you’re saying something that’s not quite correct, statistically speaking.</p>
+<p>6.  You write, &#8220;Consider the typical high school curriculum. English is the international language of business, but American high school students spend years studying Spanish, or even French. During English, many students spend more time deciphering the archaic language of Shakespeare than practicing business writing. Few jobs require knowledge of higher mathematics, but over 80% of high school grads suffer through geometry.”  I think all these topics could be taught better, but my real issue here is that this argument contradicts what you said back on page 6, that you were <em>not</em> going to just “complain we aren’t spending our money in the right way.”</p>
+<p>To put it another way:  </p>
+<p>7.  You write, “The Ivory Tower ignores the real world.”  I think you need to define your terms.  Is “Ivory Tower” all of education?  All college education?  All education at certain departments at certain colleges?  Lots of teachers of economics are engaged with the real world, no?  Actually it’s not so clear to me what you mean by the real world.  I guess it does not include the world of teaching and learning.  So what parts of the economy do count as real?  I’m not saying you can’t make a point here, but I think you need to define your terms in some way to keep your statements from being meaningless!</p>
+<p>And a couple things you didn’t talk about in your book, but I think you should:</p>
+<p>&#8211; Side effects of Big Education:  Big Ed provides jobs for a bunch of politically left-wing profs and grad students, it also gives them influence.  For example, Paul Krugman without the existence of a big economics educational establishment would, presumably, not be as influential as the actual Paul Krugman.  One could say the same thing about, say, Greg Mankiw, but the point is that academia as a whole, and prestigious academia in particular, contains lots more liberal Krugmans than conservative Mankiws.  Setting aside one’s personal political preferences, one might consider this side effect of Big Ed to be bad (in that it biases the political system) or good (in that it provides a counterweight to the unavoidable conservative biases of Big Business) or neutral.  Another side effect of Big Ed is powerful teachers unions.  Which, once again, could be considered a plus, a minus, or neutral, depending on your political perspective.  Yet another side effect of Big Ed is that it funds various things associated with schools, such as high school sports (they’re a big deal in Texas, or so I’ve heard!), college sports, and research in areas ranging from Shakespeare to statistics.  Again, one can think of these extracurricular activities as a net benefit, a net cost, or a washout.</p>
+<p>In any case, I think much of the debate over the <em>value</em> of education and the <em>structuring</em> of education is driven by attitudes toward its side effects.  This is not something you discuss in your book but I think it’s worth mentioning.  Where <em>you </em>stand on the side effects can well affect your attitude toward the efficacy of the education establishment.  There’s a political dimension here.  You’re a forthright guy and I think your book will be strengthened if you openly acknowledge the political dimension rather than leaving it implicit.</p></blockquote>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/economics/" rel="category tag">Economics</a>, <a href="https://statmodeling.stat.columbia.edu/category/political-science/" rel="category tag">Political Science</a>, <a href="https://statmodeling.stat.columbia.edu/category/sociology/" rel="category tag">Sociology</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/10/quantitative-science-is-indirectly-relevant-to-the-real-world-also-some-comments-on-the-case-against-education/#comments"><b>92</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47181 -->
+
+				
+					
+	<article id="post-48079" class="post-48079 post type-post status-publish format-standard hentry category-bayesian-statistics category-public-health category-statistical-computing category-teaching">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/10/pathfinder-and-sars-cov-2-talks-in-paris-this-week/" rel="bookmark">Pathfinder, Causality, and SARS-CoV-2 talks in Paris this week</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/10/pathfinder-and-sars-cov-2-talks-in-paris-this-week/" title="6:13 am" rel="bookmark"><time class="entry-date" datetime="2022-10-10T06:13:05-04:00">October 10, 2022 6:13 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/bob_carpenter/" title="View all posts by Bob Carpenter" rel="author">Bob Carpenter</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/10/pathfinder-and-sars-cov-2-talks-in-paris-this-week/#comments">1</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><b>Tuesday, 11 October 2022</b></p>
+<p>Andrew and I both have talks tomorrow, so I&#8217;m bummed I have to miss his.  I&#8217;ll be talking about Pathfinder at the Polytechnique:</p>
+<blockquote class="wp-embedded-content" data-secret="xHAWxUNJyB"><p><a href="https://www.hi-paris.fr/2022/09/15/bob-carpenter-11-october-2022/">Hi! PARIS Seminar &#8211; Bob Carpenter, 11 October 2022</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="&#8220;Hi! PARIS Seminar &#8211; Bob Carpenter, 11 October 2022&#8221; &#8212; Hi! PARIS" src="../www.hi-paris.fr/2022/09/15/bob-carpenter-11-october-2022/embed/index.html#?secret=xHAWxUNJyB" data-secret="xHAWxUNJyB" width="584" height="329" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<p>As you may recall from his earlier post, Andrew&#8217;s giving <a href="https://sites.google.com/view/all-about-that-bayes/#h.7o1vrsqwz75h">a talk on causal inference</a> the same day at Marie Curie in the center of Paris.</p>
+<p><b>Thursday, 13 October 2022</b></p>
+<p>On Thursday, I&#8217;ll be giving a talk on SARS-CoV-2 diagnostic testing to France Mentre&#8217;s group at Paris Diderot / INSERM.  Here&#8217;s the title and abstract:</p>
+<blockquote><p>
+Test Site Variation and Sensitivity Time Trends in Covid Diagnostic Tests</p>
+<p>I&#8217;ll present two relatively simple models of Covid test sensitivity and specificity.  In the first, sensitivity and specificity are allowed to vary by test site.  We use calibration tests at sites for known positive or known negative cases to develop a hierarchical model to predict accuracy at a new site.  I&#8217;ll present results for the data from Santa Clara early in the pandemic.  This first model can act as a component in any diagnostic study, much like a PK model for a drug can be coupled with a range of PD models.  In the second model, sensitivity is allowed to grow from infection to a peak at symptom onset and decay after that.  I&#8217;ll provide several parameterizations and show results for different cohorts of patience.  I&#8217;ll discuss coupling the second model with time trends of infection fatality and hopspitalization in order to infer population infection levels.  Theoretically, these models are easy to combine, but practically speaking, we do not have a good data set to fit a joint model without very strong assumptions.</p>
+<p>The first model is joint work with Andrew Gelman (Columbia University).  The second model is joint work with Tom Ward (UK Health Security Agency).
+</p></blockquote>
+<p>The location is</p>
+<blockquote><p>
+2.30 pm, Oct 13, University Paris Diderot, 16 rue Henri Huchard, room 342
+</p></blockquote>
+<p>and apparently you have to leave ID with security in order to access floor 3 (it&#8217;s in the medical school).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/" rel="category tag">Bayesian Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/public-health/" rel="category tag">Public Health</a>, <a href="https://statmodeling.stat.columbia.edu/category/statistical-computing/" rel="category tag">Statistical computing</a>, <a href="https://statmodeling.stat.columbia.edu/category/teaching/" rel="category tag">Teaching</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/10/pathfinder-and-sars-cov-2-talks-in-paris-this-week/#comments"><b>1</b> Reply</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48079 -->
+
+				
+					
+	<article id="post-47858" class="post-47858 post type-post status-publish format-standard hentry category-bayesian-statistics category-teaching category-zombies">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/09/who-rotated-my-cookie-the-all-too-common-mistake-when-presenting-bayesian-inference-to-strain-at-the-gnat-of-the-prior-while-swallowing-the-camel-of-the-likelihood/" rel="bookmark">Who rotated my cookie?  The all-too-common mistake when presenting Bayesian inference to strain at the gnat of the prior while swallowing the camel of the likelihood</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/09/who-rotated-my-cookie-the-all-too-common-mistake-when-presenting-bayesian-inference-to-strain-at-the-gnat-of-the-prior-while-swallowing-the-camel-of-the-likelihood/" title="9:22 am" rel="bookmark"><time class="entry-date" datetime="2022-10-09T09:22:46-04:00">October 9, 2022 9:22 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/09/who-rotated-my-cookie-the-all-too-common-mistake-when-presenting-bayesian-inference-to-strain-at-the-gnat-of-the-prior-while-swallowing-the-camel-of-the-likelihood/#comments">13</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Sander Greenland pointed me to <a href="https://www.youtube.com/watch?v=CcnLnKU26dg">this amusing little book</a> that introduces Bayesian inference using a simple example of a kid taking a bite out of a cookie:</p>
+<p><img src="wp-content/uploads/2022/07/Screen-Shot-2022-07-24-at-9.44.15-PM.png" alt="" width="200" /><img src="wp-content/uploads/2022/07/Screen-Shot-2022-07-24-at-9.44.25-PM.png" alt="" width="200" /></p>
+<p><img src="wp-content/uploads/2022/07/Screen-Shot-2022-07-24-at-9.42.48-PM.png" alt="" width="200" /><img src="wp-content/uploads/2022/07/Screen-Shot-2022-07-24-at-9.42.53-PM.png" alt="" width="200" /></p>
+<p>Literal-minded statistician that I am, I noticed a problem here:  that 1/3 probability in the likelihood seems too high.  Given the picture of the cookie with the candies, I&#8217;d say the probability of getting a bite with no candies is more like 1/10.</p>
+<p>Then there&#8217;s all this with the prior distribution:</p>
+<p><img src="wp-content/uploads/2022/07/Screen-Shot-2022-07-24-at-9.46.05-PM.png" alt="" width="200" /></p>
+<p>This demonstrates a general point that we see in Bayesian analysis: lots of obsessing over the prior, but the likelihood is set up without much thought at all!  Obv the numbers in the cookie example are arbitrary:  for the purpose of teaching, it doesn&#8217;t matter if it&#8217;s 1/3 or 1/10 or whatever.  The larger problem comes both in teaching and in practice, when people use likelihoods that are way off, and they never even think to check.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/" rel="category tag">Bayesian Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/teaching/" rel="category tag">Teaching</a>, <a href="https://statmodeling.stat.columbia.edu/category/zombies/" rel="category tag">Zombies</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/09/who-rotated-my-cookie-the-all-too-common-mistake-when-presenting-bayesian-inference-to-strain-at-the-gnat-of-the-prior-while-swallowing-the-camel-of-the-likelihood/#comments"><b>13</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47858 -->
+
+				
+					
+	<article id="post-47865" class="post-47865 post type-post status-publish format-standard hentry category-miscellaneous-science category-zombies">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/08/its-doxtastic/" rel="bookmark">It&#8217;s . . . doxtastic!</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/08/its-doxtastic/" title="9:42 am" rel="bookmark"><time class="entry-date" datetime="2022-10-08T09:42:54-04:00">October 8, 2022 9:42 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/08/its-doxtastic/#comments">7</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Paul Alper writes:</p>
+<blockquote><p>In recent months I have been mumbling that no one else seems to recognize that Bayesian Revision needs revision because on an empirical basis, humans unlike machines, ignore evidence that contradicts a prior belief&#8212;the House Committee is on tonight and I will be glued to what transpires* even though my priors indicate nothing will move the needle.  Then I discovered that I am very late to this party regarding doxastic logic.</p>
+<p>From Wikipedia:</p>
+<p><img src="wp-content/uploads/2022/07/Screen-Shot-2022-07-25-at-2.44.07-AM.png" alt="" width="400" /></p>
+<p>In all your blogging items, has doxastic ever been mentioned by anyone?</p>
+<p>*<em>Transpired</em> is an interesting word to me because, as incredible as it may seem, the synonym used today for it, i.e., happened, was fiercely opposed in the 1920s.  The preferred synonym was limited to perspired.</p></blockquote>
+<p>My response:  I&#8217;ve never heard the term &#8220;doxastic&#8221; before, but this discussion reminds me of the distinction between evidence and truth, which I&#8217;ve discussed in many places (for example <a href="http://www.stat.columbia.edu/~gelman/research/published/ethics22.pdf">here</a> and <a href="https://statmodeling.stat.columbia.edu/2018/04/06/important-distinction-truth-evidence/">here</a>) and which I think causes no end of troubles among scientists who conflate these two ideas.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-science/" rel="category tag">Miscellaneous Science</a>, <a href="https://statmodeling.stat.columbia.edu/category/zombies/" rel="category tag">Zombies</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/08/its-doxtastic/#comments"><b>7</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47865 -->
+
+				
+					
+	<article id="post-48070" class="post-48070 post type-post status-publish format-standard hentry category-statistical-computing category-teaching">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/07/mira-magic-a-probabilistic-card-trick/" rel="bookmark">Mira magic&#8212;a probabilistic card trick</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/07/mira-magic-a-probabilistic-card-trick/" title="3:00 pm" rel="bookmark"><time class="entry-date" datetime="2022-10-07T15:00:41-04:00">October 7, 2022 3:00 PM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/bob_carpenter/" title="View all posts by Bob Carpenter" rel="author">Bob Carpenter</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/07/mira-magic-a-probabilistic-card-trick/#comments">32</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>One of the fun and educational exhibits at Antonietta Mira&#8217;s children&#8217;s science museum exhibition, <a href="https://statmodeling.stat.columbia.edu/2022/10/06/numb3d-by-numbers-a-must-see-kids-science-exhibition-about-measurement-counting-and-stats/">Numb3d by Numbers</a>, is a probabilistic card trick.  Antonietta didn&#8217;t invent the trick and can&#8217;t recall who did (nor did a quick internet search reveal the originator).  The trick is characteristic of probabilistic card tricks, which are tricks that work with some high probability.</p>
+<p><b>The card trick</b></p>
+<p>Kids divide up a standard deck of 52 playing cards and lay them out end to end in any order.  The cards are big enough for kids to stand on, and laying 52 of them out creates a winding path through the exhibition hall. The exhibition is just full of these nice touches&#8212;everything is highly interactive and scaled for not just one child, but groups of children.  </p>
+<p>Next, each kid chooses a starting point from among the first five cards and stands on the card they have chosen.  At this point, the science educator leading the tour tells them where they will all end up.  Each child proceeds along the path of cards the path (down the deck), each time advancing by the value of the card on which they were standing (cards 1–9 have their natural values, whereas ace, 10, jack, queen, king all count as 1). </p>
+<p>How does the educator know where they&#8217;ll all end up and what&#8217;s the probability that the trick works?</p>
+<p><b>Coupling in Markov chains</b></p>
+<p>The first observation to make about this is that the trick works by coupling.  That is, each kids&#8217; path picks out a Markov chain, and they will couple with high probability.  Coupling here means that they get to the same card at some point before the end of the path.  Given that the path is deterministic, as soon as a pair of paths couple, they are guaranteed to wind up in the same location.</p>
+<p><b>Stanislaw Ulam to the rescue</b></p>
+<p>Ulam developed the Monte Carlo method when he was laid up in hospital in 1946 and playing solitaire to pass the time.  He couldn&#8217;t work out the exact probability of winning analytically, so he played a bunch of games and estimated the chance of winning by the empirical win frequency.  Fun aside:  according to the <a href="https://bookdown.org/manuele_leonelli/SimBook/a-bit-of-history.html">A bit of history</a> section of Manuelle Leonelli&#8217;s online book <i>Simulation and Modelling to Understand Change</I>, the name &#8220;Monte Carlo&#8221; was chosen by Metropolis as a code name for von Neumann and Ulam&#8217;s work, which was classified (being during the Cold War).</p>
+<p>We&#8217;re going to follow in Ulam&#8217;s footsteps and figure out the answer by simulation.  Mitzi and I wrote the following Python code to do the simulation on the train after visiting Antonietta at Università della Svizzera Italiana (USI) in Lugano.</p>
+<p><tt style="font-family: ui-monospace">mira-magic.py</tt>:</p>
+<pre style="font-family: ui-monospace">import random
+
+suit = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1, 1, 1]
+deck = 4 * suit
+
+def walk(deck, start):
+    """returns final position for deck from start position"""
+    pos = start
+    while pos + deck[pos] < len(deck):
+        pos += deck[pos]
+    return pos
+
+def couples(deck):
+    """return True if two random starts in 0:4 of a shuffled deck couple"""
+    random.shuffle(deck)
+    starts = random.sample(range(5), 2)
+    end1 = walk(deck, starts[0])
+    end2 = walk(deck, starts[1])
+    return end1 == end2
+
+N = 10**6
+successes = 0
+for _ in range(N):
+    successes += couples(deck)
+
+rate = successes / N    
+var = rate * (1 - rate) * N
+sd = var**0.5
+se = sd / N
+conf_lb = rate - 1.96 * se
+conf_ub = rate + 1.96 * se
+
+print(f'Based on {N} simulations:')
+print(f'  probability of coupling: {rate:5.3f}')
+print(f'  se: {se:7.5f}')
+print(f'  95% confidence interval = ({conf_lb:6.4f}, {conf_ub:6.4f})')
+</pre>
+<p>We define one suit of a deck of cards and then repeat it 4 times for a full deck.  We then defined a function <tt style="font-family: ui-monospace">walk()</tt> that evaluates the final position given a starting position and the deck.  We define a second function <tt style="font-family: ui-monospace">couples()</tt> that returns <tt style="font-family: monospace">True</tt> if we shuffle the deck, choose two different starting points among the first five cards, and wind up at the same place.  The main loop just does a bunch of simulations and counts the number of successes.  This lets us define the success rate.  The variance of a binomial distribution is known and computed as indicated.  We then calculate the standard deviation and standard error, which lets us compute the bounds of a confidence interval.  We then print the results with carefully chosen precision to match the standard errors.</p>
+<p><b>The results</b></p>
+<p>Here's what happens when we run the program.</p>
+<pre style="font-family: ui-monospace">card-coupling$ python3 mira-magic.py 
+Based on 1000000 simulations:
+  probability of coupling: 0.983
+  se: 0.00013
+  95% confidence interval = (0.9828, 0.9833)
+</pre>
+<p>So that's our answer---98.3%.  The confidence interval just shows we've run enough simulations.  The whole simulation takes close to 15s on my new M2-based MacBook Air, because Python is really really slow for loops [edit: one of the comments has a faster Julia version.]</p>
+<p>I wonder what the science educators do when either (a) kids count wrong, or (b) the trick just fails probabilistically.</p>
+<p><b>Variants</b></p>
+<p>We can also consider variants by slightly tweaking the code.</p>
+<ul>
+<li>If the kids are forced to choose the first two cards, the probability goes up to 98.8%.
+<li>If we count 10 as 10, the probability goes down to 94.3%.
+<li>If we count 10 as 10 and all the face cards as 10, the probability goes way down to 69.5%.
+<li>If we add two jokers and have them count as 1, the probability goes up to 99.7%.
+<li>If we were to use two decks instead of one, the probability goes up to 99.98%.
+<li>If we use two decks and add two jokers, the probability is above 99.99%.
+</ul>
+<p>All those cards with value 1 clearly have a strong effect on the probability of coupling, as does the size of the deck.</p>
+<p>For more about coupling in Markov chains and applications to shuffling cards and random walks on a hypercube, here's a nice <a href="https://people.engr.tamu.edu/andreas-klappenecker/csce658-s18/coupling.pdf">slide deck from Andreas Klappenecker</a>.</p>
+<p>[edit:  I forgot to say how the educator knew the answer---they just count from card 1 as the kids lay the cards out.  This also seems like it might be error prone, at least for those of us who are mathematically inclined but sloppy at arithmetic.]</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/statistical-computing/" rel="category tag">Statistical computing</a>, <a href="https://statmodeling.stat.columbia.edu/category/teaching/" rel="category tag">Teaching</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/07/mira-magic-a-probabilistic-card-trick/#comments"><b>32</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48070 -->
+
+				
+					
+	<article id="post-48063" class="post-48063 post type-post status-publish format-standard hentry category-bayesian-statistics category-causal-inference">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/07/les-distributions-a-priori-pour-linference-causale-my-talk-in-paris-tues-11-oct-14h/" rel="bookmark">Les Distributions a Priori pour l&#8217;Inférence Causale (my talk in Paris Tues 11 Oct 14h)</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/07/les-distributions-a-priori-pour-linference-causale-my-talk-in-paris-tues-11-oct-14h/" title="9:58 am" rel="bookmark"><time class="entry-date" datetime="2022-10-07T09:58:46-04:00">October 7, 2022 9:58 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/07/les-distributions-a-priori-pour-linference-causale-my-talk-in-paris-tues-11-oct-14h/#comments">4</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="https://sites.google.com/view/all-about-that-bayes/#h.7o1vrsqwz75h">Here it is</a>:</p>
+<blockquote><p>Les Distributions a Priori pour l&#8217;Inférence Causale</p>
+<p>En l&#8217;inférence bayésienne on doit spécifier un modèle pour les données (donc un likelihood) et un modèle pour les paramètres (un loi a priori).  Envisagez deux questions:<br />
+1.  Pourquoi est-ce plus difficile de préciser le likelihood que le loi a priori?<br />
+2.  Pour préciser le loi a priori, comment peut-on sauter entre la literature théorique (l&#8217;invariance, le tendance au loi normal, etc) et la literature appliquée (l&#8217;elicitation des experts, la robustesse, etc.)?<br />
+Je discuter ces questions dans la domaine de l&#8217;inférence causale:  les lois a priori pour les effets causals, les coefficients de la regression, et les autres paramètres dans les modèles causals.</p></blockquote>
+<p>If you follow the link you&#8217;ll see that somewhere along the line they translated my title and abstract into English.  It seems that the talk is supposed to be in English too, which I guess will make it a bit more coherent.  The causal inference connection should be interesting.  It&#8217;s not a talk about causal inference; it&#8217;s more that thinking about causal inference can give us some insight into setting up models.  As is often the case, we can do more when we engage with subject-matter storylines.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/" rel="category tag">Bayesian Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/causal-inference/" rel="category tag">Causal Inference</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/07/les-distributions-a-priori-pour-linference-causale-my-talk-in-paris-tues-11-oct-14h/#comments"><b>4</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48063 -->
+
+				
+					
+	<article id="post-48045" class="post-48045 post type-post status-publish format-standard hentry category-miscellaneous-statistics category-sports tag-cheating tag-chess">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/chess-cheating-how-to-detect-it-other-than-catching-someone-with-a-shoe-phone/" rel="bookmark">Chess cheating: how to detect it (other than catching someone with a shoe phone)</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/06/chess-cheating-how-to-detect-it-other-than-catching-someone-with-a-shoe-phone/" title="6:34 pm" rel="bookmark"><time class="entry-date" datetime="2022-10-06T18:34:25-04:00">October 6, 2022 6:34 PM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/phil/" title="View all posts by Phil" rel="author">Phil</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/06/chess-cheating-how-to-detect-it-other-than-catching-someone-with-a-shoe-phone/#comments">67</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			
+<p>This post is by Phil Price, not Andrew.<br /><br />Some of you have surely heard about the cheating scandal that has recently rocked the chess world (or perhaps it&#8217;s more correct to say the &#8216;cheating-accusation scandal.&#8217;)  The whole kerfuffle started when World Champion Magnus Carlsen withdrew from a tournament after losing a game to a guy named Hans Niemann. Carlsen didn&#8217;t say at the time why he resigned, in fact he said &#8220;I really prefer not to speak. If I speak, I am in big trouble.&#8221;  Most people correctly guessed that Carlsen suspected that Niemann had cheated to win. Carlsen later confirmed that suspicion. Perhaps he didn&#8217;t say so at the start because he was afraid of being sued for slander. <br /><br />Carlsen faced Niemann again in a tournament just a week or two after the initial one, and Carlsen resigned on move 2.<br /><br />In both of those cases, Carlsen and Niemann were playing &#8220;over the board&#8221; or &#8220;OTB&#8221;, i.e. sitting across a chess board from each other and moving the pieces by hand.  That&#8217;s in contrast to &#8220;online&#8221; chess, in which players compete by moving pieces on a virtual board.  Cheating in online chess is very easy: you just run a &#8220;chess engine&#8221; (a chess-playing program) and enter the moves from your game into the engine as you play, and let it tell you what move to make next.  Cheating in OTB chess is not so simple: at high-level tournaments players go through a metal detector before playing and are not allowed to carry a phone or other device. (A chess engine running on a phone can easily beat the best human players.  A chess commentator once responded to the claim &#8220;my phone can beat the world chess champion&#8221; by saying &#8220;that&#8217;s nothing, my microwave can beat the world chess champion.&#8221;).  But if the incentives are high enough, some people will take difficult steps in order to win. In at least one tournament it seems that a player was using a chess computer (or perhaps a communication device)<a href="https://en.chessbase.com/post/the-shoe-aistant--ivanov-forfeits-at-blagoevgrad-051013"> concealed in his shoe</a>. <br /><br />I don&#8217;t know if there are specific allegations related to how Niemann might have cheated in OTB games. A shoe device again, which Niemann uses to both enter the moves as they occur and to get the results through vibration? A confederate who enters the moves and signals Niemann somehow (a suppository that vibrates?). I&#8217;m not really sure what the options are. It would be very hard to &#8220;prove&#8221; cheating simply by looking at the moves that are made in a single game: at the highest levels both players can be expected to play <em>almost</em> perfectly, usually making one of the top two or three moves on every move (as evaluated by the computer), so simply playing very very well is not enough to prove anything.</p>
+
+
+
+ <a href="https://statmodeling.stat.columbia.edu/2022/10/06/chess-cheating-how-to-detect-it-other-than-catching-someone-with-a-shoe-phone/#more-48045" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a>					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-statistics/" rel="category tag">Miscellaneous Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/sports/" rel="category tag">Sports</a>			</span>
+							
+										<span class="sep"> | </span>
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="https://statmodeling.stat.columbia.edu/tag/cheating/" rel="tag">cheating</a>, <a href="https://statmodeling.stat.columbia.edu/tag/chess/" rel="tag">chess</a>			</span>
+							
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/chess-cheating-how-to-detect-it-other-than-catching-someone-with-a-shoe-phone/#comments"><b>67</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48045 -->
+
+				
+					
+	<article id="post-48060" class="post-48060 post type-post status-publish format-standard hentry category-teaching">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/numb3d-by-numbers-a-must-see-kids-science-exhibition-about-measurement-counting-and-stats/" rel="bookmark">Numb3d by Numbers&#8212;a must see kid&#8217;s science exhibition about measurement, counting, and stats</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/06/numb3d-by-numbers-a-must-see-kids-science-exhibition-about-measurement-counting-and-stats/" title="3:00 pm" rel="bookmark"><time class="entry-date" datetime="2022-10-06T15:00:37-04:00">October 6, 2022 3:00 PM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/bob_carpenter/" title="View all posts by Bob Carpenter" rel="author">Bob Carpenter</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/06/numb3d-by-numbers-a-must-see-kids-science-exhibition-about-measurement-counting-and-stats/#comments">2</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Mitzi and I just visited <a href="https://search.usi.ch/en/people/f8960de6d60dd08a79b6c1eb20b7442b/mira-antonietta">Antonietta Mira</a> in Lugano.  We went to talk about applying her delayed rejection algorithm to Hamiltonian Monte Carlo and partial momentum refresh Metropolis-adjusted Langevin.</p>
+<p><b>Numb3d by Numbers</b> </p>
+<p>We were absolutely blown away when Antonietta took us on a tour of her science museum exhibition on probability, statistics, and simulation (Diamo I Numeri! in Italian, Numb3d by Numbers in English, which are not quite direct translations).  If I had seen this when I was a kid, you wouldn&#8217;t have been able to tear me away from the exhibits until I&#8217;d figured each one out.  The kids that were there when we were touring were all enthralled. </p>
+<p>Here&#8217;s a description of the exhibit (in English): <a href="https://statmodeling.stat.columbia.edu/wp-content/uploads/2022/10/numb3d-by-numbers.pdf">Numb3d by Numbers</a>.  And here&#8217;s a short video in Italian, which shows how beautiful the exhibits are: <a href="https://youtu.be/p4wfzwREvkI">Diamo I Numeri!</a>  </p>
+<p><b>The exhibits</b></p>
+<p>Among the exhibits Mitzi and I recall (and we were only there for an hour or so!):</p>
+<ul>
+<li> the coolest, largest-scale Galton board I&#8217;ve ever seen
+<li> a horse race with two six-sided dice and horses numbered 2&#8211;12
+<li> the towers of Hanoi
+<li> number writing systems that had kids translate their age
+<li> ancient games of counting
+<li> a magic trick with a giant deck of cards (see below)
+<li> population pyramids where people put their number down
+<li> crowdsourced guesses of jars of regular and irregular items
+<li> visualizations with strings of what you&#8217;re good and bad about to see trends
+<li> tangrams and other shape-based puzzles
+<li> magic squares with all the math
+<li> combinatorics and growth of possibilities
+<li> real-time counters, scales, and how they need to be contextualized
+<li> emergent patterns like dragonfly wings and sunflower illustrations of Fibonacci sequences
+<li> randomness and patterns
+<li> parity and how shepherds count goats
+<li> positive predictive accuracy of diagnostic tests using frequencies rather than probabilities
+<li> abacuses and calculating methods
+</ul>
+<p>The exhibits are aimed at kids, but they also work for adults and some of them even for young kids. It&#8217;s set up in a beautiful hillside science museum (all of Lugano is amazingly beautiful, being situated on a crystal clear alpine lake).  The exhibition is designed to be led by a science educator, though it&#8217;s also possible to do a self-guided tour.  </p>
+<p><b>On the road</b></p>
+<p>The great news is that Antonietta and crew just got a grant to translate the exhibit into English and German (it&#8217;s now in Italian) and take it on the road.  She&#8217;s looking for collaborators interested in bringing it to their home towns.  If you have any interest in stats education for kids, this is a golden opportunity.</p>
+<p><b>A probabilistic card trick</b></p>
+<p>I was fascinated by the probabilistic card trick (Antonietta&#8217;s a mathemagician and did a bunch of other card tricks for us).  Kids divide up a deck of cards and lay them out end to end in any order (these were huge cards so the deck made a winding path through the exhibits).  Then kids chose different starting points in the first five cards and stood on the card they chose.  Then each proceeds to move along the path (down the deck), each time advancing by the value of the card on which they were standing (cards 1&#8211;9 had their natural values, ace, 10, jack, queen, king all count as 1).  The science educator conducting the tour tells the kids where they&#8217;ll land before they start.  </p>
+<p>So the question is how does this work?  If you&#8217;re used to thinking about simulation, you may understand the theory of why this is likely to happen.  Mitzi and I had to put on our <a href="https://bookdown.org/manuele_leonelli/SimBook/a-bit-of-history.html">Stan(islaw Ulam) hats</a> to work out how probable the trick is to work by simulation.  I&#8217;ll leave it as an exercise for the reader (and provide a solution in a follow-up post).</p>
+<p><b>A horse race</b></p>
+<p>I really liked the horse race because it involved dice and was very graphic and tactile.  Kids all get a pair of really big dice and the horses are numbered 2&#8211;12.  Each time a horse&#8217;s number comes up, it advances one step.  The first horse to take 20 (?) steps wins.  Of course, the 7 horse is the strong favorite, especially with a lot of steps.  We didn&#8217;t get around to doing the simulation for that one, but it&#8217;d be a nice exercise to introduce discrete Monte Carlo methods.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/teaching/" rel="category tag">Teaching</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/numb3d-by-numbers-a-must-see-kids-science-exhibition-about-measurement-counting-and-stats/#comments"><b>2</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48060 -->
+
+				
+					
+	<article id="post-48065" class="post-48065 post type-post status-publish format-standard hentry category-miscellaneous-science category-miscellaneous-statistics">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/one-of-the-hardest-things-about-differential-privacy-could-also-be-seen-as-opportunity/" rel="bookmark">(One of) the hardest things about differential privacy could also be seen as opportunity </a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/06/one-of-the-hardest-things-about-differential-privacy-could-also-be-seen-as-opportunity/" title="1:41 pm" rel="bookmark"><time class="entry-date" datetime="2022-10-06T13:41:03-04:00">October 6, 2022 1:41 PM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/jessica/" title="View all posts by Jessica Hullman" rel="author">Jessica Hullman</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/06/one-of-the-hardest-things-about-differential-privacy-could-also-be-seen-as-opportunity/#comments">2</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><span style="font-weight: 400">This is Jessica. During a discussion recently a collaborator expressed a fact about differential privacy that I think captures what is fundamentally difficult about getting data analysts to accept it. The fact is:</span></p>
+<blockquote><p><span style="font-weight: 400">If you can describe a small set of queries that capture what you fundamentally care about, designing the differentially private mechanism for that set will be much more efficient than any mechanism that tries to give data that allows you to do a wider set of queries.</span></p></blockquote>
+<p><span style="font-weight: 400">Given that every query leaks information, and you can avoid some leakage by designing the privacy mechanism to account for the structure of the queries (e.g. where outputs can be expected to correlate), it will always be to your advantage to have information on the analyst’s priorities. This creates a design problem: how do we get the analyst to give you their preferences over what’s important so you can give them the most efficient privacy mechanism? </span></p>
+<p><span style="font-weight: 400">This aspect of differential privacy can seem at odds with all the wisdom around the value of exploring the data to identify how to best analyze it. This older </span><a href="https://www.cs.cmu.edu/afs/cs/usr/wing/www/class/15-895/LarryWasserman.pdf"><span style="font-weight: 400">slide deck from Wasserstein</span></a><span style="font-weight: 400"> describes a cultural divide that crops up, where many statisticians would much prefer a sanitized database where they can issue whatever queries they want, but that’s not what the computer scientists have in mind.</span></p>
+<p><span style="font-weight: 400">I’ve generally leaned a bit more toward the side of statisticians than privacy researchers, in the sense of agreeing that its not trivial to expect people to be able to tell you about their highest priority queries before they see the data. But, taking the above fact as inherent to privacy protection, maybe we could instead see this as a feature of differential privacy, in that it could inspire new approaches to getting analysts to more efficiently arrive at and specify their interests or fundamental questions when doing interactive data analysis. In visualization research for instance, we’ve mostly shied away from thinking like mechanism designers who want to elicit analysts’ prior domain knowledge in order to recommend useful views to them (or maybe we equate “seeing data” with elicitation). The design mantras focus on simple defaults for how to show the observed data, like Provide an overview first, but offer details on demand, or Give them the ability to focus on certain data, but don’t let them lose the context. I don’t think these ideas are incongruent with getting analysts to provide information about what they are most interested in, but there’s a tendency to shoot for domain general, knowledge-agnostic tools where possible. Ideas like trying to elicit analysts’ priors or expectations can seem controversial (see, e.g., our </span><a href="https://hdsr.mitpress.mit.edu/pub/w075glo6/release/1"><span style="font-weight: 400">discussion article on model checking as a theory for visualization</span></a><span style="font-weight: 400">).  </span></p>
+<p><span style="font-weight: 400">Perhaps more importantly, there haven’t really been popular use cases where you couldn’t just see all the data, outside of the researcher degrees of freedom type examples discussed in science reform more generally. There have been some suggestions that popular visual analysis tools like Tableau might be p-hacking machines in a sense, by letting people make all sorts of comparisons, but it’s hard to find really compelling evidence that this is a major risk. So, maybe the awkward constraints differential privacy imposes are a blessing in disguise, and we’ll get more sustained attempts to elicit domain knowledge as an alternative to the “just let them click around until they find it” approach.</span></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-science/" rel="category tag">Miscellaneous Science</a>, <a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-statistics/" rel="category tag">Miscellaneous Statistics</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/one-of-the-hardest-things-about-differential-privacy-could-also-be-seen-as-opportunity/#comments"><b>2</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48065 -->
+
+				
+					
+	<article id="post-48062" class="post-48062 post type-post status-publish format-standard hentry category-jobs category-sports category-stan">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/a-baseball-analytics-job-using-stan/" rel="bookmark">A baseball analytics job using Stan!</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/06/a-baseball-analytics-job-using-stan/" title="12:44 pm" rel="bookmark"><time class="entry-date" datetime="2022-10-06T12:44:32-04:00">October 6, 2022 12:44 PM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/06/a-baseball-analytics-job-using-stan/#respond"><span class="leave-reply">Reply</span></a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Tony Williams writes:</p>
+<blockquote><p>I have nothing to do with <a href="https://boards.greenhouse.io/clevelandguardiansbops/jobs/6303371002">this job</a>, but it might be interesting to your readers since they specifically mention Stan as a desired skill.</p></blockquote>
+<p>From the link:</p>
+<blockquote><p>Data Scientist, Baseball Research &#038; Development</p>
+<p>The Cleveland Guardians Baseball Research &#038; Development (R&#038;D) group is seeking data scientists at a variety of experience levels . . . You will analyze video, player tracking, and biomechanics data as well as traditional baseball data sources like box scores to help us acquire and develop baseball players into a championship-caliber team. . . .</p>
+<p>Qualifications </p>
+<p>&#8211; Demonstrated experience or advanced degree in a quantitative field such as Statistics, Computer Science, Economics, Machine Learning, or Operations Research. </p>
+<p>&#8211; Programming skills in a language such as R or Python to work efficiently at scale with large data sets. </p>
+<p>&#8211; Desire to continue learning about data science applications in baseball. </p></blockquote>
+<p>And then in the Preferred Experience section, along with &#8220;Demonstrated research experience in a sports context (baseball is a plus)&#8221; and &#8220;Experience with computer vision&#8221; and a few other things, they have:</p>
+<blockquote><p><strong>&#8211; Experience with Bayesian statistics and languages such as Stan.</strong></p></blockquote>
+<p>How cool is that??</p>
+<p>And, hey!  I just looked it up . . . the Guardians have a winning record this year and they&#8217;re headed for the playoffs!  Nothing like the Cleveland MLB teams I remember from my childhood . . .</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/jobs/" rel="category tag">Jobs</a>, <a href="https://statmodeling.stat.columbia.edu/category/sports/" rel="category tag">Sports</a>, <a href="https://statmodeling.stat.columbia.edu/category/stan/" rel="category tag">Stan</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/a-baseball-analytics-job-using-stan/#respond"><span class="leave-reply">Leave a reply</span></a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48062 -->
+
+				
+					
+	<article id="post-47886" class="post-47886 post type-post status-publish format-standard hentry category-sociology category-teaching">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/now-that-faculty-arent-coming-into-the-office-anymore-will-universities-ever-recover/" rel="bookmark">(Now that faculty aren&#8217;t coming into the office anymore) Will universities ever recover?</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/06/now-that-faculty-arent-coming-into-the-office-anymore-will-universities-ever-recover/" title="9:19 am" rel="bookmark"><time class="entry-date" datetime="2022-10-06T09:19:24-04:00">October 6, 2022 9:19 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/06/now-that-faculty-arent-coming-into-the-office-anymore-will-universities-ever-recover/#comments">31</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A few years ago I taught a course at Sciences Po in Paris.  The classes were fine, the students were fine, but there was almost no academic community.  I had an office in some weird building where they stuck visitors.  The place was mostly pretty empty.  Sometimes I&#8217;d go over to the department of economics, which was hosting me (but had no office space)&#8212;it was in a fancy building on, I think it was the 4th floor but maybe it was the 2nd floor and they were just very long flights of stairs&#8212;and most of the faculty were never there.  So I didn&#8217;t bother to come by very often:  what&#8217;s the point if there&#8217;s no office for you and no colleagues to talk with.  I don&#8217;t know what it was like for the students who wanted intellectual experiences outside of class:  maybe there were places where the grad students hung out?  I don&#8217;t know.</p>
+<p>Anyway, the American universities that I&#8217;ve attended and taught at have been nothing like that.  Buzzing with faculty and grad students, lots of opportunities for spontaneous conversations.</p>
+<p>Then came covid.  Classes were moved online, then we weren&#8217;t allowed to come into the office or teach in person.  At some point they started allowing in-person teaching but they were still discouraging us from showing up to the office or having in-person meetings outside of class.  Eventually all become allowed, but then there became the new norm of zoom meetings, faculty who didn&#8217;t want to come into work if they didn&#8217;t have to, students who wanted to avoid the commute to school, etc.  And then, as with Sciences Po those many years ago, I was less motivated to show up to work myself, which resulted in fewer spontaneous interactions with students and colleagues.  Online can be convenient&#8212;hey, look at this blog!&#8212;but I still think something is missing.</p>
+<p>So here&#8217;s the question:  Will universities ever recover?</p>
+<p>Sadly, I suspect the answer is no.  It&#8217;s just too easy not so show up, also this is just the continuation of a decades-long trend of fewer weeks in the semester, fewer days of class in the week, much less need for the physical library, etc.  Also, the people at Sciences Po back in 2009 seemed just fine with closed doors and empty corridors.  So that arid academic environment seems like a stable equilibrium.  It makes me sad.  Obv it&#8217;s the least of our problems in the world today, but still.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/sociology/" rel="category tag">Sociology</a>, <a href="https://statmodeling.stat.columbia.edu/category/teaching/" rel="category tag">Teaching</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/06/now-that-faculty-arent-coming-into-the-office-anymore-will-universities-ever-recover/#comments"><b>31</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47886 -->
+
+				
+					
+	<article id="post-48054" class="post-48054 post type-post status-publish format-standard hentry category-bayesian-statistics category-statistical-computing">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/05/what-nested-r-hat-teaches-us-about-the-classical-r-hat/" rel="bookmark">What Nested R-hat teaches us about the classical R-hat</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/05/what-nested-r-hat-teaches-us-about-the-classical-r-hat/" title="3:00 pm" rel="bookmark"><time class="entry-date" datetime="2022-10-05T15:00:00-04:00">October 5, 2022 3:00 PM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/charles/" title="View all posts by Charles Margossian" rel="author">Charles Margossian</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/05/what-nested-r-hat-teaches-us-about-the-classical-r-hat/#comments">7</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p class="p1"><span class="s1">(this post is by Charles)</span></p>
+<p class="p1" style="text-align: left;"><span class="s1">My colleagues Matt Hoffman, Pavel Sountsov, Lionel Riou-Durand, Aki Vehtari, Andrew Gelman, and I released a <a href="https://arxiv.org/abs/2110.13017">preprint</a> titled “Nested R-hat: assessing the convergence of Markov chain Monte Carlo when running many short chains”. This is a revision of an earlier preprint. Here’s the abstract:</span></p>
+<blockquote>
+<p class="p3"><span class="s1">The growing availability of hardware accelerators such as GPUs has generated interest in Markov chains Monte Carlo (MCMC) workflows which run a large number of chains in parallel. Each chain still needs to forget its initial state but the subsequent sampling phase can be almost arbitrarily short. To determine if the resulting short chains are reliable, we need to assess how close the Markov chains are to convergence to their stationary distribution. The R-hat statistic is a battle-tested convergence diagnostic but unfortunately can require long chains to work well. We present a nested design to overcome this challenge, and introduce tuning parameters to control the reliability, bias, and variance of convergence diagnostics.</span></p>
+</blockquote>
+<p class="p3"><span class="s1">The paper is motivated by the possibility of running many Markov chains in parallel on modern hardware, such as GPU. Increasing the number of chains allows you to reduce the variance of your Monte Carlo estimator, which is what the sampling phase is for, but not the bias, which is what the warmup phase is for (that&#8217;s the short story).<span class="Apple-converted-space">  </span>So you can trade length of the sampling phase for number of chains but you still need to achieve approximate convergence.</span></p>
+<p class="p3"><span class="s1">There’s more to be said about the many-short-chains regime but what I want to focus on is what we’ve learned about <a href="https://arxiv.org/abs/1903.08008">the more classic R-hat</a>. The first step is to rewrite the condition, R-hat &lt; 1.01, as a tolerance on the variance of the <i>per chain </i>Monte Carlo estimator. Intuitively, we’re running a stochastic algorithm to estimate an expectation value, which is a non-random quantity. Hence, different chains should, despite their different initialization and seed, still come to an “agreement”. This agreement is measured by the variance of the estimator produced by each chain.</span></p>
+<p class="p3"><span class="s1">Now here’s the paradox. The expected squared error of a <i>per chain </i>Monte Carlo estimator decomposes into a squared bias and a variance. When diagnosing convergence, we’re really interested in making sure the bias has decayed sufficiently (a common phrase is “has become negligible”, but I find it useful to think of MCMC as a biased algorithm). But, with R-hat, we’re really monitoring the variance, not the bias! So how can this be a useful diagnostic?</span></p>
+<p class="p3"><span class="s1">This paradox occurred to us when we rewrote R-hat to monitor the variance of Monte Carlo estimators constructed using groups of chains or <i>superchains</i>, rather than a single chain. The resulting nested R-hat decays to 1 provided we have enough chains, even if the individual chains are short (think a single iteration). But here’s the issue: regardless of wether the chains are close to convergence or not, R-hat can be made arbitrarily close to 1 by increasing the size of each superchain and thence decreasing the variance of their Monte Carlo estimator. Which goes back to my earlier point: you cannot monitor bias simply by looking at variance.</span></p>
+<p class="p3"><span class="s1">Or can you?</span></p>
+<p class="p3"><span class="s1">Here’s the twist: we now force all the chains within a superchain to start at the same point. I had this idea initially to deal with multimodal distributions. The chains within a group are no longer independent, though eventually they (hopefully) will forget about each other. In the mean time we have artificially increased the variance. Doing a standard variance decomposition:</span></p>
+<p class="p3"><span class="s1">total variance = variance of conditional expectation + expected conditional variance</span></p>
+<p class="p3"><span class="s1">Here we’re conditioning on the initial point. If the expected value of each chain no longer depends on the initialization, then the first term — variance of the conditional expectation — goes to 0. This is a measurement of “how well the chains forget their starting point”, and we call it the <i>violation of stationarity</i>. It is indifferent to the number of chains. The second term, on the other hand, persists even if your chains are stationary but it decays to 0 as you increase the number of chains. More generally, this <i>persistent variance</i> can be linked to the Effective Sample Size.</span></p>
+<p><a href="wp-content/uploads/2022/10/nested-rhat_monitor_large-1.png"><img loading="lazy" class="wp-image-48059  aligncenter" src="wp-content/uploads/2022/10/nested-rhat_monitor_large-1.png" alt="" width="520" height="184" /></a></p>
+<p class="p3"><span class="s1">We argue that nested R-hat is a (scaled) measure of the <i>violation of stationarity</i>, biased by the <i>persistent variance</i>. How does this link to the squared bias? Well, both bias and violation decay as we warm up our chains, so one can be used as a “proxy clock” of the other. I don’t have a fully general theory for this but if you consider a Gaussian target and are willing to solve an SDE, you can show that the violation and the squared bias decay at the same rate. This is also gives us insight about how over-dispersed initializations should be (or not be) for nested R-hat to be reliable.</span></p>
+<p class="p3"><span class="s1">Now nested R-hat is a generalization of R-hat, meaning our analysis carries over! We moreover have a theory of what R-hat measures which does not assume stationarity. Part of the conceptual leap is to do an asymptotic analysis which considers an infinite number of finite (non-stationary) chains, rather than a single infinitely long (and hence stationary) chain.</span></p>
+<p class="p3"><span class="s1">Moving forward, I hope this idea of a proxy clock will help us identify cases where R-hat and its nested version are reliable, and how we might revise our MCMC processes to get more reliable diagnostics. Two examples discussed in the preprint: choice of initial variance and how to split a fixed total number of chains into superchains.</span></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/" rel="category tag">Bayesian Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/statistical-computing/" rel="category tag">Statistical computing</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/05/what-nested-r-hat-teaches-us-about-the-classical-r-hat/#comments"><b>7</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-48054 -->
+
+				
+					
+	<article id="post-47932" class="post-47932 post type-post status-publish format-standard hentry category-bayesian-statistics category-decision-theory category-miscellaneous-statistics category-political-science category-zombies">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://statmodeling.stat.columbia.edu/2022/10/05/not-frequentist-enough/" rel="bookmark">Not frequentist enough.</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://statmodeling.stat.columbia.edu/2022/10/05/not-frequentist-enough/" title="9:58 am" rel="bookmark"><time class="entry-date" datetime="2022-10-05T09:58:00-04:00">October 5, 2022 9:58 AM</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://statmodeling.stat.columbia.edu/author/andrew/" title="View all posts by Andrew" rel="author">Andrew</a></span></span>			</div><!-- .entry-meta -->
+			
+						<div class="comments-link">
+				<a href="https://statmodeling.stat.columbia.edu/2022/10/05/not-frequentist-enough/#comments">4</a>			</div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I think that many mistakes in applied statistics could be avoided if people were to think in a more frequentist way.</p>
+<p>Look at it this way:</p>
+<p>In <strong>the usual way of thinking</strong>, you apply a statistical procedure to the data, and if the result reaches some statistical-significance threshold, and you get similar results from a robustness study, changing some things around, then you&#8217;ve made a discovery.</p>
+<p>In <strong>the frequentist way of thinking</strong>, you consider your entire procedure  (all the steps above) as a single unit, and you consider what would happen if you apply this procedure to a long series of similar problems.</p>
+<p>The first thing to recognize is that <em>the frequentist way of thinking requires extra effort</em>:  you need to define this potential series of similar problems and then either do some mathematical analysis or, more likely, set up a simulation on the computer.</p>
+<p>The second thing to recognize is that, just because a statistical method is defined in a &#8220;classical&#8221; or hypothesis-testing framework, that doesn&#8217;t make it a &#8220;frequentist&#8221; method.  For a method to be frequentist, it needs to defined relative to some frequency calibration.  A p-value or a confidence interval, by itself, is not frequentist; for it to be frequentist there needs to be some model of what would be done in a family of replications of the procedure.  This is the point that Loken and I make in section 1.2 of our <a href="http://www.stat.columbia.edu/~gelman/research/unpublished/forking.pdf">forking paths paper</a>.</p>
+<p>In the usual way of teaching statistics, the extra effort required by the frequentist approach is not clear, for two reasons.  First, textbooks present the general theory in the context of simple examples such as linear models with no selection, where there are simple analytic solutions.  Second, textbook examples of statistical theory typically start with an assumed probability model for the data, in which case most of the hard work has already been done.  The model is just <em>there</em>, postulated; it doesn&#8217;t look like a set of &#8220;assumptions&#8221; at all.  It&#8217;s <a href="https://statmodeling.stat.columbia.edu/2009/05/24/handy_statistic/">the camel that is the likelihood</a> (although, strictly speaking, the likelihood is not the data model; additional assumptions are required to go from an (unnormalized) likelihood function to get a generative model for the data).</p>
+<p><strong>An example</strong></p>
+<p>To demonstrate this point, I&#8217;ll use an example from a recent article, <a href="http://www.stat.columbia.edu/~gelman/research/published/causal_paths_3.pdf">Criticism as asynchronous collaboration: An example from social science research</a>, where I discussed a published data analysis that claimed to show that &#8220;politicians winning a close election live 5–10 years longer than candidates who lose,&#8221; with this claim being based on a point estimate from a few hundred elections:  the estimate was statistically significantly different from zero and similar estimates were produced in a robustness study in which various aspects of the model were tweaked.  The published analysis was done using what I describe above as &#8220;the usual way of thinking.&#8221;</p>
+<p>Now let&#8217;s consider the frequentist approach.  We have to make some assumptions.  Suppose you start with the assumption that losing an election has the effect of increasing your lifespan by X years, where X has some value between -1 and 1.  (From an epidemiological point of view, an effect of 1 year is large, really on the very high end of what could be expected as an average treatment effect of something as indirect as winning or losing an election.)  From there you can work out what might happen from a few hundred elections, and you&#8217;ll see that any estimate will be super noisy, to the extent that if you fit a model and select on statistical significance, you&#8217;ll get an estimated effect that&#8217;s much higher than the real effect (a large type M error, as we say).  You&#8217;ll also see that, if you want to get a large effect (large effects are exciting, right!) then you&#8217;ll want the standard error of your estimate to be larger, and you can get this by the simple expedient of predicting future length of life without including current age as a predictor.  For more discussion of all these issues, see section 4 of the <a href="http://www.stat.columbia.edu/~gelman/research/published/causal_paths_3.pdf">linked article</a>.  My point here is that whatever analysis we do, there is a benefit to thinking about it from a frequentist perspective&#8212;what would things look like if the procedure were replied repeatedly to many datasets?&#8212;rather than to fixate on the results of the analysis as applied to the data at hand.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/" rel="category tag">Bayesian Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/decision-theory/" rel="category tag">Decision Theory</a>, <a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-statistics/" rel="category tag">Miscellaneous Statistics</a>, <a href="https://statmodeling.stat.columbia.edu/category/political-science/" rel="category tag">Political Science</a>, <a href="https://statmodeling.stat.columbia.edu/category/zombies/" rel="category tag">Zombies</a>			</span>
+							
+										
+										<span class="sep"> | </span>
+						<span class="comments-link"><a href="https://statmodeling.stat.columbia.edu/2022/10/05/not-frequentist-enough/#comments"><b>4</b> Replies</a></span>
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47932 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="https://statmodeling.stat.columbia.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="block-3" class="widget widget_block widget_categories"><ul class="wp-block-categories-list wp-block-categories">	<li class="cat-item cat-item-25"><a href="https://statmodeling.stat.columbia.edu/category/art/">Art</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://statmodeling.stat.columbia.edu/category/bayesian-statistics/">Bayesian Statistics</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://statmodeling.stat.columbia.edu/category/causal-inference/">Causal Inference</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://statmodeling.stat.columbia.edu/category/decision-theory/">Decision Theory</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="https://statmodeling.stat.columbia.edu/category/economics/">Economics</a>
+</li>
+	<li class="cat-item cat-item-239"><a href="https://statmodeling.stat.columbia.edu/category/jobs/">Jobs</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="https://statmodeling.stat.columbia.edu/category/literature/">Literature</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-science/">Miscellaneous Science</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://statmodeling.stat.columbia.edu/category/miscellaneous-statistics/">Miscellaneous Statistics</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://statmodeling.stat.columbia.edu/category/multilevel-modeling/">Multilevel Modeling</a>
+</li>
+	<li class="cat-item cat-item-257"><a href="https://statmodeling.stat.columbia.edu/category/papers/">Papers</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://statmodeling.stat.columbia.edu/category/political-science/">Political Science</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="https://statmodeling.stat.columbia.edu/category/public-health/">Public Health</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://statmodeling.stat.columbia.edu/category/sociology/">Sociology</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://statmodeling.stat.columbia.edu/category/sports/">Sports</a>
+</li>
+	<li class="cat-item cat-item-94"><a href="https://statmodeling.stat.columbia.edu/category/stan/">Stan</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://statmodeling.stat.columbia.edu/category/statistical-computing/">Statistical computing</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://statmodeling.stat.columbia.edu/category/statistical-graphics/">Statistical graphics</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="https://statmodeling.stat.columbia.edu/category/teaching/">Teaching</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://statmodeling.stat.columbia.edu/category/zombies/">Zombies</a>
+</li>
+</ul></aside><aside id="block-4" class="widget widget_block">
+<div class="wp-container-6 wp-block-columns">
+<div class="wp-container-5 wp-block-column" style="flex-basis:100%">
+<div class="wp-container-4 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="wp-container-3 wp-block-columns">
+<div class="wp-container-2 wp-block-column" style="flex-basis:100%">
+<div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container"><ol class="has-dates has-excerpts wp-block-latest-comments"><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://bob-carpenter.github.io">Bob Carpenter</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/16/mit-built-a-theranos-for-plants-update/#comment-2105788">“MIT Built a Theranos for Plants” update</a><time datetime="2022-10-16T10:45:36-04:00" class="wp-block-latest-comments__comment-date">October 16, 2022 10:45 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>> Lots has changed since 1986, I guess. It has always been thus, with some details in this nice article&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://www.neaman.org.il/EN/Ron-Kenett">Ron Kenett</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/15/how-should-bayesian-methods-for-the-social-sciences-differ-from-bayesian-methods-for-the-physical-sciences-my-talk-at-the-bayesian-methods-for-the-social-sciences-workshop-21-oct-2022-paris/#comment-2105612">How should Bayesian methods for the social sciences differ from Bayesian methods for the physical sciences? (my talk at the Bayesian Methods for the Social Sciences workshop, 21 Oct 2022, Paris)</a><time datetime="2022-10-16T01:16:32-04:00" class="wp-block-latest-comments__comment-date">October 16, 2022 1:16 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Different goals, different models - this is the title of my talk on https://community.jmp.com/t5/Discovery-Summit-Americas-2022/Different-goals-different-models-How-to-use-models-to-sharpen-up/ta-p/505854?nobounce The goals of social sciences are&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">name withheld by request</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/15/how-should-bayesian-methods-for-the-social-sciences-differ-from-bayesian-methods-for-the-physical-sciences-my-talk-at-the-bayesian-methods-for-the-social-sciences-workshop-21-oct-2022-paris/#comment-2105550">How should Bayesian methods for the social sciences differ from Bayesian methods for the physical sciences? (my talk at the Bayesian Methods for the Social Sciences workshop, 21 Oct 2022, Paris)</a><time datetime="2022-10-15T20:15:29-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 8:15 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>One of the many ways you could say there are "two kinds" of scientific inquiry is between those whose data&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105536">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T18:43:25-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 6:43 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Not likely that it IS (not isn't).</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105535">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T18:41:42-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 6:41 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Chipmunk - &gt; and your batting average *should* be higher under those circumstances. I think that misses the point. Which&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">chiopmunk</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105517">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T17:09:42-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 5:09 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>'analytics guys say “clutch” hitting isn’t really a thing' I've thought that for a long time. Metrics like average with&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">val</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/15/how-should-bayesian-methods-for-the-social-sciences-differ-from-bayesian-methods-for-the-physical-sciences-my-talk-at-the-bayesian-methods-for-the-social-sciences-workshop-21-oct-2022-paris/#comment-2105502">How should Bayesian methods for the social sciences differ from Bayesian methods for the physical sciences? (my talk at the Bayesian Methods for the Social Sciences workshop, 21 Oct 2022, Paris)</a><time datetime="2022-10-15T16:11:32-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 4:11 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Different models, yes. I would put at least as much emphasis on the difference in the types of data used?</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105495">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T15:49:44-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 3:49 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>IIRC, analytics guys say "clutch" hitting isn't really a thing. Just an outgrowth of sample size. But you couldn't ever&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">gec</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105455">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T13:12:07-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 1:12 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>You point out that "regression to the mean" has predictive power, which is something that I hadn't thought about before.&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.econ.uiuc.edu/~roger/">r</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105424">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T11:34:31-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 11:34 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Stigler, S. (1996) The History of Statistics in 1933, Statistical Science, 11, 244- 252. Offers some amusing further examples of&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">chipmunk</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105409">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T10:42:14-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 10:42 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Joshua said: "You’d really have to look at where the Yankees meshed with their opponents in their pitching staff rotation.."&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">chipmunk</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105408">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T10:36:04-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 10:36 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Thanks, somebody. I really like your last paragraph, very concise explanation.</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Charlie</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/14/hey-heres-a-surprisingly-fascinating-discussion-of-copyright-of-transformed-images/#comment-2105398">Hey!  Here&#8217;s a surprisingly fascinating discussion of copyright of transformed images!</a><time datetime="2022-10-15T09:47:47-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 9:47 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Paul Soglin, former mayor of Madison, Wisconsin.</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Phil</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2105203">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-15T02:06:56-04:00" class="wp-block-latest-comments__comment-date">October 15, 2022 2:06 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Horsecow did you go to Oberlin?</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Anoneuoid</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/14/hey-heres-a-surprisingly-fascinating-discussion-of-copyright-of-transformed-images/#comment-2104940">Hey!  Here&#8217;s a surprisingly fascinating discussion of copyright of transformed images!</a><time datetime="2022-10-14T13:19:54-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 1:19 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>This page (before my comment) is currently about 77,000 bytes, appearing the way it does on your screen due to&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Zhou Fang</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/14/hey-heres-a-surprisingly-fascinating-discussion-of-copyright-of-transformed-images/#comment-2104920">Hey!  Here&#8217;s a surprisingly fascinating discussion of copyright of transformed images!</a><time datetime="2022-10-14T12:15:38-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 12:15 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>I wonder how all that affects the discussion about AI generated art. Is running an algorithm on a corpus of&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104900">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-14T11:02:37-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 11:02 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Horsecow: Yes, good point regarding the principal-agent problem.</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">horsecow</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104889">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-14T10:41:19-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 10:41 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Somewhat to the side of the main discussion, but there are many situations where coaches who are losing do _not_&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">somebody</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104866">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-14T09:44:51-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 9:44 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>This site completely bungled that statement because it interpreted the less than or greater than sign as html tags. Suppose&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">somebody</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104864">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-14T09:38:23-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 9:38 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Suppose I have a machine that shoots a paper airplane along a linear measuring tape and see how far it&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104855">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-14T09:20:23-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 9:20 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>One more comment on this and then I'll drop it. Thinking more about eams regressing to the mean thing, as&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104851">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-14T09:08:12-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 9:08 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>chipmunk - When I first read your comment it fit with my thinking. Obviously, Andrew says "no" but I can't&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Anonymous</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/10/quantitative-science-is-indirectly-relevant-to-the-real-world-also-some-comments-on-the-case-against-education/#comment-2104850">Quantitative science is (indirectly) relevant to the real world, also some comments on a book called The Case Against Education</a><time datetime="2022-10-14T09:06:08-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 9:06 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>I'm only skimming the discussion here, but I wanted to point out the inaccuracy of a few early claims made&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Thomas</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104845">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-14T08:52:11-04:00" class="wp-block-latest-comments__comment-date">October 14, 2022 8:52 AM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Ha, it works in cycling as well https://www.bmj.com/content/351/bmj.h6304</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">chipmunk</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104553">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T21:58:11-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 9:58 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Huh.</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://eighteenthelephant.com/">Raghu Parthasarathy</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/10/quantitative-science-is-indirectly-relevant-to-the-real-world-also-some-comments-on-the-case-against-education/#comment-2104500">Quantitative science is (indirectly) relevant to the real world, also some comments on a book called The Case Against Education</a><time datetime="2022-10-13T20:46:08-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 8:46 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>In case anyone is interested, I wrote some thoughts on Caplan's book here: https://eighteenthelephant.com/2022/10/13/the-case-for-and-the-case-against-the-case-against-education/</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104463">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T20:18:02-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 8:18 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>He's run out of gas.</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104459">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T20:13:00-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 8:13 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Tom - Makes sense to me. The other aspect that puzzles me about this post is that I don't quite&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Harry</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104415">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T17:53:56-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 5:53 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>There would still be regression to the mean after conditioning on the strength of the opposition. You only wouldn’t see&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Anoneuoid</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104404">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T17:24:48-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 5:24 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Regression to the mean is a ubiquitous statistical pattern Indeed, but there is some real reason things went up too&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104355">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T15:46:54-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 3:46 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Chipmunk: No. If the variation is purely random, the correlation between x and y is zero, and you get complete&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Chipmunk</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104349">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T15:36:45-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 3:36 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Interesting discussion. The "regression to the mean" as Andrew expresses it here applies strictly to situations in which the variation&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104341">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T15:23:38-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 3:23 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Gwern: I'd put what you're saying in item 6 of my above post. James made lots of progress (not just&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://www.gwern.net/notes/Regression">gwern</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104333">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T15:09:10-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 3:09 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>At some point you have to conclude that Bill James is deliberately refusing to understand. He has been corrected on&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Tom Passin</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104330">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T15:06:54-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 3:06 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>"But you’d expect a pilot that performed far above their typical performance to not maintain that high level" Yes, but&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104298">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T14:45:22-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 2:45 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Adam: Regarding your point 3: this is a point that is often confusing, so it's typically discussed in detail in&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104297">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T14:43:20-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 2:43 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Nik: In these discussions, we're always conditioning on x. That's what regression to the mean is all about: it's a&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Nik Vetr</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104294">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T14:35:17-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 2:35 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>&gt; Yes, it depends on the distribution—and you don’t always get regression to the median either. Sure, but that's just&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104293">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T14:34:18-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 2:34 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>OK, reading the comments I guess you get to that, here: &gt; More generally, as you say, the regression is&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joshua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104292">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T14:30:44-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 2:30 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>IOW, seems to me you'd expect "the best pilots" to continue to perform exceptionally well, and NOT revert to the&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Joahua</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104290">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T14:25:52-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 2:25 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Seems to me (albeit as a statistics illiterate), that there's a missing piece here (well, there is for me, anyway)&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Adam C</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104288">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T14:22:16-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 2:22 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>1. "James’s mistake is to think, when this comes to probability of winning, that this dynamic on balance favors the&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">JimV</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104270">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T13:50:26-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 1:50 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>"The team which, based on their position, would have a 90% chance to win doesn’t actually have a 90% chance&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104265">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T13:38:25-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 1:38 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Dmitri: OK, I fixed it. I guess I was in "Watership Down" mode.</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Hiroaki Minato</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/08/its-doxtastic/#comment-2104262">It&#8217;s . . . doxtastic!</a><time datetime="2022-10-13T13:35:30-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 1:35 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Hi, Andrew. Didn't you mean to title this blog post with "It’s . . . doxastic!" instead of "It’s .&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Dmitri</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104258">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T13:20:55-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 1:20 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>"I have five answers:" Yeah, but I bet Bill James can count to six! ;-)</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="https://www.gwern.net">gwern</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/12/blogs-twitter-again/#comment-2104256">Blogs > Twitter again</a><time datetime="2022-10-13T13:12:58-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 1:12 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>I wouldn't say 'often'; 1 in 20 or 30 posts maybe? It feels pretty rare. He will post excerpts from&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104254">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T13:08:25-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 1:08 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Nik, Yes, it depends on the distribution---and you don't always get regression to the median either. For a simple example,&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Nik Vetr</span> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104250">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T12:57:41-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 12:57 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>I've always intuited the "Regression to the Mean" phenomenon as being straightforwardly implied by geometry: a sample from a (symmetric,&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="http://www.stat.columbia.edu/~gelman/">Andrew</a> on <a class="wp-block-latest-comments__comment-link" href="https://statmodeling.stat.columbia.edu/2022/10/13/bill-james-vs-kahneman-and-tversky/#comment-2104247">How did Bill James get this one wrong on regression to the mean?  Here are 6 reasons:</a><time datetime="2022-10-13T12:54:50-04:00" class="wp-block-latest-comments__comment-date">October 13, 2022 12:54 PM</time></footer><div class="wp-block-latest-comments__comment-excerpt"><p>Matt: No, regression to the mean holds for average-height women too. Considering women who are 1 cm taller than the&hellip;</p>
+</div></article></li></ol></div></div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<style>.wp-container-1 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-1 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-1 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-2 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-2 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-2 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-3 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-3 > * { margin: 0; }</style>
+<style>.wp-container-4 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-4 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-4 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-5 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-5 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-5 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-6 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-6 > * { margin: 0; }</style>
+<script type='text/javascript' src='wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+
+</body>
+</html>
