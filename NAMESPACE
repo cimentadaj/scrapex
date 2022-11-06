@@ -3,6 +3,7 @@
 export(elpais_newspaper_ex)
 export(gelman_blog_ex)
 export(history_elections_spain_ex)
+export(history_france_ex)
 export(prep_browser)
 export(retirement_age_europe_ex)
 export(spanish_schools_ex)
