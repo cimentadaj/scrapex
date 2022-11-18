@@ -5,8 +5,4 @@
 #* @param sex The sex to subset. Available only 'm' and 'f'
 #* @serialize json
 #* @get /api/v1/covid_cases
-function(region, sex) {
-  tmp <- api_coveragedb_data[1:2, ]
-  jsonlite::toJSON(tmp)
-  list(msg = paste0("The message is: '", msg, "'"))
-}
+scrapex:::serve_api_coveragedb
