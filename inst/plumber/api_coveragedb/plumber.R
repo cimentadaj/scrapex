@@ -11,5 +11,5 @@ scrapex:::serve_api_coveragedb_cases
 #* @param region The region to subset. Available only 'California', 'Utah' and 'New York'
 #* @param sex The sex to subset. Available only 'm' and 'f'
 #* @serialize json
-#* @get /api/v1/covid_cases
+#* @get /api/v1/covid_vaccines
 scrapex:::serve_api_coveragedb_vaccine
