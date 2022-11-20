@@ -24,7 +24,7 @@
 ##' }
 ##'
 api_coveragedb <- function() {
-  api_launch("api_coveragedb")
+  launch_api("api_coveragedb")
 }
 
 filter_cases <- function(df) df[df$Measure == "Cases", ]
