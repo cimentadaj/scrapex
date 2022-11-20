@@ -5,8 +5,10 @@ quiet <- function(x) {
 }
 
 
-test_that("launch_api returns `rcall` process", {
+test_that("launch_api returns correct output", {
   new_api <- quiet(launch_api("coveragedb"))
-  expect_s3_class(new_api, c("r_process", "process", "R6"))
+  expect_s3_class(new_api, "list")
+  expect_s3_class(new_api$process, c("r_process", "process", "R6"))
+  expect_s3_class(new_api$api_web, "character")
   new_api$kill()
 })

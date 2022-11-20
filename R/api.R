@@ -15,13 +15,14 @@
 launch_api <- function(function_name) {
   random_port <- httpuv::randomPort()
 
-  rp <- callr::r_bg(function(random_port) {
+  rp <- callr::r_bg(function(random_port, function_name) {
     api <- plumber::plumb_api("scrapex", function_name)
     plumber::pr_run(api, port = random_port)
-  }, args = list(random_port = random_port))
+  }, args = list(random_port = random_port, function_name = function_name))
 
-  print(paste0("Visit your REST API at http://localhost:", random_port))
-  print(paste0("Documentation is at http://localhost:", random_port, "/__docs__/"))
+  api_web <- paste0("http://localhost:", random_port)
+  print(paste0("Visit your REST API at ", api_web))
+  print(paste0("Documentation is at ", api_web, "/__docs__/"))
 
-  rp
+  list(process = rp, api_web = api_web)
 }
