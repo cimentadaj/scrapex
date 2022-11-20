@@ -2,15 +2,26 @@
 % Please edit documentation in R/api_coveragedb.R
 \name{api_coveragedb}
 \alias{api_coveragedb}
-\title{Custom rest API for examples}
+\title{REST API for the COVerAGE-DB database}
 \usage{
 api_coveragedb()
 }
 \value{
-Whatever
+callr result of the individual R process
 }
 \description{
-Custom rest API for examples
+COVerAGE-DB is an open-access database that includes cumulative counts of confirmed COVID-19 cases, deaths, tests, and vaccines by age and sex. The main goal of COVerAGE-DB is to provide a centralized, standardized, age-harmonized, and fully reproducible database of COVID-19 data. For more information, visit
+}
+\details{
+This API wraps a custom download performed locally of the database and filters only 'California', 'Utah' and 'New York' for both sexes (`m` and `f` in the database).
+
+The API has two parameters which can be filtered:
+
+* region: 'California', 'Utah' and 'New York'
+* sex: `m` and `f`
+
+
+This function launches a plumber API in a new R process using `callr` and return the `callr` process.
 }
 \examples{
 

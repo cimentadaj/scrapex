@@ -15,14 +15,13 @@ api_coveragedb_data <-
   as_tibble() %>%
   mutate(Date = dmy(Date)) %>%
   filter(
-    Measure == "Cases",
+    Measure %in% c("Cases", "Vaccination1", "Vaccination2", "Vaccination3"),
     between(Date, ymd("2020-01-01"), ymd("2021-12-31")),
     Region %in% c("California", "New York State", "Utah"),
     Metric == "Count",
     AgeInt == 10,
     Sex %in% c("m", "f")
   )
-
 
 ## library(ggplot2)
 ## api_coveragedb %>%
