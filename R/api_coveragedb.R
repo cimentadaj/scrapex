@@ -30,21 +30,44 @@ api_coveragedb <- function() {
 filter_cases <- function(df) df[df$Measure == "Cases", ]
 filter_vaccine <- function(df) df[df$Measure %in% c("Vaccination1", "Vaccination2", "Vaccination3"), ]
 
-serve_api_coveragedb <- function(region, sex) {
-  match.arg(region, c("California", "Utah", "New York State"))
-  match.arg(sex, c("m", "f"))
-  region_filter <- api_coveragedb_data$Region == region
-  sex_filter <- api_coveragedb_data$Sex == sex
-  tmp <- api_coveragedb_data[region_filter & sex_filter, ]
+serve_api_coveragedb <- function(df, region, sex) {
+  region_filter <- df$Region == region
+  sex_filter <- df$Sex == sex
+  tmp <- df[region_filter & sex_filter, ]
   tmp
 }
 
-serve_api_coveragedb_cases <- function(region, sex) {
-  df <- serve_api_coveragedb(region, sex)
-  filter_cases(df)
+
+serve_api_coveragedb_cases <- function(region, sex, req, res) {
+
+  if (!req$args$region %in% c("California", "Utah", "New York State")) {
+    res$status <- 400
+    return(list(error = "Only regions 'California', 'Utah' and 'New York State' are permitted."))
+  }
+
+  if (!req$args$sex %in% c("m", "f")) {
+    res$status <- 400
+    return(list(error = "Only values m and f are permitted"))
+  }
+
+
+  df <- filter_cases(api_coveragedb_data)
+  serve_api_coveragedb(df, region, sex)
 }
 
-serve_api_coveragedb_vaccine <- function(region, sex) {
-  df <- serve_api_coveragedb(region, sex)
-  filter_vaccine(df)
+serve_api_coveragedb_vaccine <- function(region, sex, req, res) {
+
+  if (!req$args$region %in% c("California", "Utah", "New York State")) {
+    res$status <- 400
+    return(list(error = "Only regions 'California', 'Utah' and 'New York State' are permitted."))
+  }
+
+  if (!req$args$sex %in% c("m", "f")) {
+    res$status <- 400
+    return(list(error = "Only values m and f are permitted"))
+  }
+
+
+  df <- filter_vaccine(api_coveragedb_data)
+  serve_api_coveragedb(df, region, sex)
 }

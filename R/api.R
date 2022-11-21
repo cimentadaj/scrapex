@@ -26,3 +26,9 @@ launch_api <- function(function_name) {
 
   list(process = rp, api_web = api_web)
 }
+
+is_error <- function(expr) {
+  res <- try(expr, silent = TRUE)
+  bool <- class(res) == "try-error"
+  list(is_error = bool, error_msg = res)
+}

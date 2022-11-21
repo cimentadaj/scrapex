@@ -10,6 +10,9 @@ coveragedb_test <- function(res, type, region, sex) {
 for (state in c("California", "Utah", "New York State")) {
   for (sex in c("m", "f")) {
 
+    req <- list(args = list(region = state, sex = sex))
+    res <- list()
+
     text <- paste0(
       "serve_api_coveragedb_cases for ",
       state,
@@ -19,7 +22,13 @@ for (state in c("California", "Utah", "New York State")) {
     )
 
     test_that(text, {
-      res <- serve_api_coveragedb_cases(state, sex)
+      res <- serve_api_coveragedb_cases(state, sex, req, res)
+      coveragedb_test(res, "Cases", state, sex)
+    })
+
+
+    test_that(text, {
+      res <- serve_api_coveragedb_cases(state, sex, req, res)
       coveragedb_test(res, "Cases", state, sex)
     })
 
@@ -33,8 +42,42 @@ for (state in c("California", "Utah", "New York State")) {
     )
 
     test_that(text, {
-      res <- serve_api_coveragedb_vaccine(state, sex)
+      res <- serve_api_coveragedb_vaccine(state, sex, req, res)
       coveragedb_test(res, c("Vaccination1", "Vaccination2", "Vaccination3"), state, sex)
     })
   }
 }
+
+test_that("serve_api_coveragedb_* returns error on wrong region", {
+    req <- list(args = list(region = "Penn", sex = "m"))
+    res <- list()
+
+    error_cases <- serve_api_coveragedb_cases(state, sex, req, res)
+    expect_identical(
+      error_cases$error,
+      "Only regions 'California', 'Utah' and 'New York State' are permitted."
+    )
+
+    error_vaccine <- serve_api_coveragedb_vaccine(state, sex, req, res)
+    expect_identical(
+      error_vaccine$error,
+      "Only regions 'California', 'Utah' and 'New York State' are permitted."
+    )
+})
+
+test_that("serve_api_coveragedb_* returns error on wrong sex", {
+  req <- list(args = list(region = "California", sex = "p"))
+  res <- list()
+
+  error_cases <- serve_api_coveragedb_cases(state, sex, req, res)
+  expect_identical(
+    error_cases$error,
+    "Only values m and f are permitted"
+  )
+
+  error_vaccine <- serve_api_coveragedb_vaccine(state, sex, req, res)
+  expect_identical(
+    error_vaccine$error,
+    "Only values m and f are permitted"
+  )
+})

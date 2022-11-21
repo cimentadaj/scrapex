@@ -10,7 +10,7 @@ raw_api_coveragedb <-
   subset_covid(Country = "USA") %>%
   as_tibble()
 
-api_coveragedb_data <-
+df <-
   raw_api_coveragedb %>%
   as_tibble() %>%
   mutate(Date = dmy(Date)) %>%
@@ -30,4 +30,4 @@ api_coveragedb_data <-
 ##   facet_wrap(Sex ~ Region) +
 ##   theme_bw()
 
-usethis::use_data(api_coveragedb_data, overwrite = TRUE, internal = TRUE)
+usethis::use_data(df, overwrite = TRUE, internal = TRUE)
