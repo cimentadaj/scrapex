@@ -16,8 +16,21 @@ launch_api <- function(function_name) {
   random_port <- httpuv::randomPort()
 
   rp <- callr::r_bg(function(random_port, function_name) {
+
     api <- plumber::plumb_api("scrapex", function_name)
-    plumber::pr_run(api, port = random_port)
+
+    api |>
+      plumber::pr_set_docs("swagger") |>
+      plumber::pr_set_api_spec(function(spec) {
+        spec$components$securitySchemes$bearerAuth$type <- "http"
+        spec$components$securitySchemes$bearerAuth$scheme <- "bearer"
+        spec$components$securitySchemes$bearerAuth$bearerFormat <- "JWT"
+        spec$security[[1]]$bearerAuth <- ""
+        spec
+      }) |>
+      plumber::pr_set_debug(TRUE) |>
+      plumber::pr_run(port = random_port)
+
   }, args = list(random_port = random_port, function_name = function_name))
 
   api_web <- paste0("http://localhost:", random_port)

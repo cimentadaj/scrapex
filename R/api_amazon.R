@@ -69,6 +69,7 @@ serve_api_amazon_user_db <- function(user_id = NULL, country = NULL, req, res) {
   final_res
 }
 
+# TODO: These should be tests for this endpoint
 ## serve_api_user_db(user_id = 970, req = list(), res = list())
 ## serve_api_user_db(country = "China", req = list(), res = list())
 ## serve_api_user_db(user_id = 970, country = "China", req = list(), res = list())
@@ -80,7 +81,27 @@ serve_api_amazon_products_user_db <- function(user_id) { #nolintr
   final_res
 }
 
+# TODO: This should be a test for this endpoint
 ## serve_api_products_user_db(user_id = 319)
 
 
+# TODO: This should be a teat for this endpoint
 ## serve_api_products_db()
+
+all_tokens <- function() {
+  tokens <- c(
+    "CctltpliQk",
+    "sr2ueYP3lp",
+    "wyutxkSQjT",
+    "07JXcCgc8D",
+    "bRKlzSNd7x",
+    "fmcQoAZnnU",
+    "Cc$OYq5<PqDLh)",
+    "SJTrgJp%Pt39T1S"
+  )
+  tokens
+}
+
+bearer_tokens <- function() {
+  sample(all_tokens(), 1)
+}

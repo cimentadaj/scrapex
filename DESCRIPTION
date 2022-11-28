@@ -18,8 +18,8 @@ Imports:
     utils,
     callr,
     plumber,
-    httpuv
-RoxygenNote: 7.1.2
+    httpuv,
+RoxygenNote: 7.2.0
 Suggests: 
     testthat (>= 2.1.0)
 Depends: 
