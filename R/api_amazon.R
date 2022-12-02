@@ -20,6 +20,25 @@ api_amazon <- function() {
   launch_api("api_amazon")
 }
 
+
+
+##' Bearer tokens to access Amazon API
+##'
+##' This function randomly samples a valid token to use the Fake Amazon API.
+##'
+##'
+##'
+##' @return A string with the token
+##' @author Jorge Cimentada
+##' @export
+##'
+##' @examples
+##' amazon_bearer_tokens()
+amazon_bearer_tokens <- function() {
+  sample(all_tokens(), 1)
+}
+
+
 serve_api_amazon_unique_author <- function() {
   distinct_author
 }
@@ -28,8 +47,8 @@ serve_api_amazon_unique_country <- function() {
   distinct_countries
 }
 
-serve_api_amazon_products_db <- function() {
-  products_db
+serve_api_amazon_products_db <- function(product_id) {
+  products_db[products_db$id == product_id, ]
 }
 
 serve_api_amazon_books_db <- function(author, genre) {
@@ -41,7 +60,7 @@ serve_api_amazon_books_db <- function(author, genre) {
 }
 
 serve_api_amazon_text_db <- function(author) {
-  author_filter <- books_db$author == author
+  author_filter <- text_db$author == author
   text_db[author_filter, ]
 }
 
@@ -102,6 +121,3 @@ all_tokens <- function() {
   tokens
 }
 
-bearer_tokens <- function() {
-  sample(all_tokens(), 1)
-}

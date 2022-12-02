@@ -22,14 +22,14 @@ function(req, res) {
       return(list(error = "No authorization bearer provided"))
     }
 
-    if (!supplied_token %in% paste0("Bearer ", all_tokens())) {
+    if (!supplied_token %in% paste0("Bearer ", scrapex:::all_tokens())) {
       res$status <- 498 # Unauthorized
       return(list(error = "Authorization bearer not valid"))
     }
 
   }
 
-  forward()
+  plumber::forward()
 }
 
 
@@ -65,11 +65,11 @@ scrapex:::serve_api_amazon_user_db
 #* Access Amazon's Products/Users database
 #* @param user_id:int The ID of the user to inspect
 #* @serialize json
-#* @get /api/v1/amazon/products
+#* @get /api/v1/amazon/products_users
 scrapex:::serve_api_amazon_products_user_db
 
 #* Access Amazon's Products database
-#* @param user_id:int The ID of the user to inspect
+#* @param product_id:int The ID of the user to inspect
 #* @serialize json
 #* @get /api/v1/amazon/products
 scrapex:::serve_api_amazon_products_db

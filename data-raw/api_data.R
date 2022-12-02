@@ -135,7 +135,7 @@ products_user_db <-
   mutate(user_id = sample(user_db$user_id, nrow(.), replace = TRUE)) %>%
   rename(product_id = id) %>%
   relocate(product_id, user_id, everything()) %>%
-  select(-name, description)
+  select(-name, -description)
 
 books_db <- bind_rows(lapply(1:5, function(x) books_db))
 set.seed(1231)
@@ -147,4 +147,15 @@ distinct_author <-
   distinct(author, genre)
 
 ######  Save all datasets #######
-usethis::use_data(distinct_countries, distinct_author, books_db, text_db, user_db, products_user_db, products_db, api_coveragedb_data, overwrite = TRUE, internal = TRUE)
+usethis::use_data(
+  distinct_countries,
+  distinct_author,
+  books_db,
+  text_db,
+  user_db,
+  products_user_db,
+  products_db,
+  api_coveragedb_data,
+  overwrite = TRUE,
+  internal = TRUE
+)
