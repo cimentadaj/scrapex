@@ -2,6 +2,7 @@
 library(covidAgeData)
 library(lubridate)
 library(dplyr)
+library(readr)
 
 inputDB <- download_covid("inputDB", progress = FALSE, tmp = TRUE)
 
@@ -146,8 +147,17 @@ distinct_author <-
   books_db %>%
   distinct(author, genre)
 
+bicing <- read_csv("https://opendata-ajuntament.barcelona.cat/data/dataset/fa94d2f3-3428-47b8-9f2b-f1e4423e745a/resource/e097e9ed-0e1f-4a87-94c3-1a589b791aeb/download")
+
+bicing <-
+  bicing %>%
+  distinct(type, latitude, longitude, streetName, streetNumber, slots) %>%
+  slice(1:20) %>%
+  as.data.frame()
+
 ######  Save all datasets #######
 usethis::use_data(
+  bicing,
   distinct_countries,
   distinct_author,
   books_db,

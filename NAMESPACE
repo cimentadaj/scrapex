@@ -2,6 +2,7 @@
 
 export(amazon_bearer_tokens)
 export(api_amazon)
+export(api_bicing)
 export(api_coveragedb)
 export(elpais_newspaper_ex)
 export(gelman_blog_ex)
