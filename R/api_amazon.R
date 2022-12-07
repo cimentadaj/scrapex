@@ -5,6 +5,7 @@
 ##'
 ##' This function launches a plumber API in a new R process using `callr` and return the `callr` process.
 ##'
+##' @param port a numeric value used as a port
 ##' @return callr result of the individual R process
 ##' @author Jorge Cimentada
 ##' @export
@@ -16,8 +17,8 @@
 ##'   live_api$kill()
 ##' }
 ##'
-api_amazon <- function() {
-  launch_api("api_amazon")
+api_amazon <- function(port = NULL) {
+  launch_api("api_amazon", random_port = port)
 }
 
 

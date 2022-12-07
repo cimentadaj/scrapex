@@ -4,7 +4,10 @@
 \alias{api_bicing}
 \title{REST API for Bicycle usage in Barcelona}
 \usage{
-api_bicing()
+api_bicing(port = NULL)
+}
+\arguments{
+\item{port}{a numeric value used as a port}
 }
 \value{
 callr result of the individual R process

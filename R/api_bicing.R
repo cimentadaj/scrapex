@@ -8,6 +8,7 @@
 ##'
 ##' This function launches a plumber API in a new R process using `callr` and return the `callr` process.
 ##'
+##' @param port a numeric value used as a port
 ##' @return callr result of the individual R process
 ##' @author Jorge Cimentada
 ##' @export
@@ -19,8 +20,8 @@
 ##'   live_api$kill()
 ##' }
 ##'
-api_bicing <- function() {
-  launch_api("api_bicing")
+api_bicing <- function(port = NULL) {
+  launch_api("api_bicing", random_port = port)
 }
 
 serve_api_bicing_slots <- function() {

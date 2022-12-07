@@ -4,10 +4,12 @@
 \alias{launch_api}
 \title{Launches an API in a new R process}
 \usage{
-launch_api(function_name)
+launch_api(function_name, random_port = NULL)
 }
 \arguments{
 \item{function_name}{the folder name where the plumber API is located. This should be in inst/plumber/}
+
+\item{random_port}{a numeric value used as a port}
 }
 \value{
 callr result of the individual R process

@@ -4,7 +4,10 @@
 \alias{api_amazon}
 \title{REST API for the Books/Products of Amazon Website}
 \usage{
-api_amazon()
+api_amazon(port = NULL)
+}
+\arguments{
+\item{port}{a numeric value used as a port}
 }
 \value{
 callr result of the individual R process

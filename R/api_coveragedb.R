@@ -12,6 +12,7 @@
 ##'
 ##' This function launches a plumber API in a new R process using `callr` and return the `callr` process.
 ##'
+##' @param port a numeric value used as a port
 ##' @return callr result of the individual R process
 ##' @author Jorge Cimentada
 ##' @export
@@ -23,8 +24,8 @@
 ##'   live_api$kill()
 ##' }
 ##'
-api_coveragedb <- function() {
-  launch_api("api_coveragedb")
+api_coveragedb <- function(port = NULL) {
+  launch_api("api_coveragedb", random_port = port)
 }
 
 filter_cases <- function(df) df[df$Measure == "Cases", ]

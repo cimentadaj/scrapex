@@ -1,6 +1,7 @@
 ##' Launches an API in a new R process
 ##'
 ##' @param function_name the folder name where the plumber API is located. This should be in inst/plumber/
+##' @param random_port a numeric value used as a port
 ##'
 ##' @return callr result of the individual R process
 ##' @author Jorge Cimentada
@@ -12,8 +13,8 @@
 ##'   live_api$kill()
 ##' }
 ##'
-launch_api <- function(function_name) {
-  random_port <- httpuv::randomPort()
+launch_api <- function(function_name, random_port = NULL) {
+  random_port <- if (is.null(random_port)) httpuv::randomPort() else random_port
 
   rp <- callr::r_bg(function(random_port, function_name) {
 

@@ -4,7 +4,10 @@
 \alias{api_coveragedb}
 \title{REST API for the COVerAGE-DB database}
 \usage{
-api_coveragedb()
+api_coveragedb(port = NULL)
+}
+\arguments{
+\item{port}{a numeric value used as a port}
 }
 \value{
 callr result of the individual R process
