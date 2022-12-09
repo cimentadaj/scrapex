@@ -1,5 +1,10 @@
 # TODO: Add tests for each function in the bicing API. Adapt the code below to Bicing.
 
+test_that("api_bicing is alive and works", {
+  test_api_is_alive(api_bicing())
+})
+
+
 ## coveragedb_test <- function(res, type, region, sex) {
 ##   expect_s3_class(res, "tbl_df")
 ##   expect_gt(nrow(res), 0)

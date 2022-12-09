@@ -1,5 +1,9 @@
 # TODO: Add tests for each function in the amazon API. Adapt the code below to Amazon.
 
+test_that("api_amazon is alive and works", {
+  test_api_is_alive(api_amazon())
+})
+
 ## coveragedb_test <- function(res, type, region, sex) {
 ##   expect_s3_class(res, "tbl_df")
 ##   expect_gt(nrow(res), 0)

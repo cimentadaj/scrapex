@@ -7,6 +7,10 @@ coveragedb_test <- function(res, type, region, sex) {
   expect_true(all(unique(res$Measure) %in% type))
 }
 
+test_that("api_coveragedb is alive and works", {
+  test_api_is_alive(api_coveragedb())
+})
+
 for (state in c("California", "Utah", "New York State")) {
   for (sex in c("m", "f")) {
 

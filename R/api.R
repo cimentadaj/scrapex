@@ -34,6 +34,9 @@ launch_api <- function(function_name, random_port = NULL) {
 
   }, args = list(random_port = random_port, function_name = function_name))
 
+  # Wait to launch the API
+  Sys.sleep(5)
+
   api_web <- paste0("http://localhost:", random_port)
   print(paste0("Visit your REST API at ", api_web))
   print(paste0("Documentation is at ", api_web, "/__docs__/"))

@@ -15,4 +15,17 @@ main_test <- function(html_links, name, len = 1) {
 
 }
 
+test_api_is_alive <- function(api) {
+  # Is alive for about 10 seconds
+  is_alive <- c()
+  for (i in 1:15) {
+    Sys.sleep(0.5)
+    is_alive <- c(is_alive, api$process$is_alive())
+  }
+
+  expect_true(all(is_alive))
+}
+
+
 test_check("scrapex")
+
